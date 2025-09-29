@@ -1073,6 +1073,7 @@ export default function Home() {
           backgroundPosition: "center",
         }}
       >
+        
         <div className="w-full flex items-center gap-4 text-center mb-10 justify-center">
           <hr className="w-20 border-white" />
           <p className="text-3xl text-white font-semibold">
