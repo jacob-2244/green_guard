@@ -12,13 +12,13 @@ type MemberCardProps = {
 
 const MemberCard = ({ image, name, position }: MemberCardProps) => {
   return (
-    <div className=" flex flex-col w-full max-w-lg h-[1000px]">
+    <div className=" flex flex-col w-full max-w-lg h-fit gap-6">
       {/* Image wrapper must be relative when using `fill` */}
       <div className="justify-center flex mx-auto  w-80 h-80  relative z-20 ">
         <Image src={image} alt="team" fill className="object-cover rounded-t-lg" />
       </div>
 
-      <div className=" w-full bg-[#F5F8ED] flex flex-col text-center  gap-2 h-[400px] justify-center -mt-[100px] align-center relative group  z-10  ">
+      <div className=" w-full bg-[#F5F8ED] flex flex-col text-center  gap-2 h-[350px] justify-center -mt-[100px] align-center relative group  z-10  ">
         <h1 className="text-2xl font-semibold">{name}</h1>
         <p className="text-app_primary text-lg font-semibold">{position}</p>
 

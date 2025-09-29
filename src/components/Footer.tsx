@@ -4,17 +4,12 @@ import Image from "next/image";
 const Footer = () => {
   return (
     <footer
-      className="w-full h-[800px] bg-cover bg-center py-40  z-10  "
+      className="w-full h-fit bg-cover bg-center pt-28 pb-6  z-10   "
       style={{ backgroundImage: "url('/images/footer-bg.jpg')" }}
     >
       <div
-        className="relative w-full flex  h-[200px] justify-between max-w-screen-xl mx-auto  "
-        style={{
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
-        <div className="absolute top-0 rounded overflow-hidden z-10 w-full h-full">
+        className="relative w-full flex   h-fit py-12 justify-between max-w-[1200px] mx-auto   " >
+        <div className="absolute top-0 rounded-md overflow-hidden z-10 w-full h-full">
           <div className="relative w-full h-full ">
             <Image src="/images/brand-bg.jpg" alt="" fill />
           </div>
@@ -24,7 +19,7 @@ const Footer = () => {
             <Image src="/images/footer-social-shape.png" alt="" fill />
           </div>
         </div>
-        <div className="flex w-full justify-between z-20 px-20  ">
+        <div className="flex w-full justify-between z-20 px-10  ">
           <div className="absolute  left-1/2 overflow-hidden z-0 w-20 top-1/2 bottom-1/2 h-10 animate-zoom-pulse">
             <Image src="/images/footer-shape2.png" alt="" fill />
           </div>
@@ -97,7 +92,7 @@ const Footer = () => {
           </p>
 
           <div className="w-full flex gap-2 items-center">
-            <hr className="border border-t-app_primary w-10" />
+            <hr className="border border-t-app_primary w-6" />
             <p className="text-lg">Contact</p>
           </div>
 
@@ -120,7 +115,6 @@ const Footer = () => {
 
           <div className="flex flex-col gap-6 w-full">
             <div className="flex items-center gap-1  cursor-pointer ">
-
               <svg
                 className="w-5 h-5 flex-shrink-0"
                 viewBox="0 0 18 18"
@@ -135,10 +129,11 @@ const Footer = () => {
                   strokeLinejoin="round"
                 />
               </svg>
-              <p className="text-lg leading-none text-gray-400 hover:text-app_primary">Home</p>
+              <p className="text-lg leading-none text-gray-400 hover:text-app_primary">
+                Home
+              </p>
             </div>
-             <div className="flex items-center gap-1  cursor-pointer ">
-
+            <div className="flex items-center gap-1  cursor-pointer ">
               <svg
                 className="w-5 h-5 flex-shrink-0"
                 viewBox="0 0 18 18"
@@ -153,10 +148,11 @@ const Footer = () => {
                   strokeLinejoin="round"
                 />
               </svg>
-              <p className="text-lg leading-none text-gray-400 hover:text-app_primary">About Us</p>
+              <p className="text-lg leading-none text-gray-400 hover:text-app_primary">
+                About Us
+              </p>
             </div>
-             <div className="flex items-center gap-1  cursor-pointer ">
-
+            <div className="flex items-center gap-1  cursor-pointer ">
               <svg
                 className="w-5 h-5 flex-shrink-0"
                 viewBox="0 0 18 18"
@@ -171,10 +167,11 @@ const Footer = () => {
                   strokeLinejoin="round"
                 />
               </svg>
-              <p className="text-lg leading-none text-gray-400 hover:text-app_primary">Our Services</p>
+              <p className="text-lg leading-none text-gray-400 hover:text-app_primary">
+                Our Services
+              </p>
             </div>
-             <div className="flex items-center gap-1  cursor-pointer ">
-
+            <div className="flex items-center gap-1  cursor-pointer ">
               <svg
                 className="w-5 h-5 flex-shrink-0"
                 viewBox="0 0 18 18"
@@ -189,10 +186,11 @@ const Footer = () => {
                   strokeLinejoin="round"
                 />
               </svg>
-              <p className="text-lg leading-none text-gray-400 hover:text-app_primary">Meet Our Team</p>
+              <p className="text-lg leading-none text-gray-400 hover:text-app_primary">
+                Meet Our Team
+              </p>
             </div>
-             <div className="flex items-center gap-1  cursor-pointer ">
-
+            <div className="flex items-center gap-1  cursor-pointer ">
               <svg
                 className="w-5 h-5 flex-shrink-0"
                 viewBox="0 0 18 18"
@@ -207,19 +205,18 @@ const Footer = () => {
                   strokeLinejoin="round"
                 />
               </svg>
-              <p className="text-lg leading-none text-gray-400 hover:text-app_primary">Latest Blog</p>
+              <p className="text-lg leading-none text-gray-400 hover:text-app_primary">
+                Latest Blog
+              </p>
             </div>
-            
-            
           </div>
         </div>
 
-         <div className="flex flex-col gap-4 w-full">
+        <div className="flex flex-col gap-4 w-full">
           <h2 className="text-white text-3xl font-bold ">Quick Links</h2>
 
           <div className="flex flex-col gap-6 w-full">
             <div className="flex items-center gap-1  cursor-pointer ">
-
               <svg
                 className="w-5 h-5 flex-shrink-0"
                 viewBox="0 0 18 18"
@@ -234,10 +231,11 @@ const Footer = () => {
                   strokeLinejoin="round"
                 />
               </svg>
-              <p className="text-lg leading-none text-gray-400 hover:text-app_primary">Testimonals</p>
+              <p className="text-lg leading-none text-gray-400 hover:text-app_primary">
+                Testimonals
+              </p>
             </div>
-             <div className="flex items-center gap-1  cursor-pointer ">
-
+            <div className="flex items-center gap-1  cursor-pointer ">
               <svg
                 className="w-5 h-5 flex-shrink-0"
                 viewBox="0 0 18 18"
@@ -252,10 +250,11 @@ const Footer = () => {
                   strokeLinejoin="round"
                 />
               </svg>
-              <p className="text-lg leading-none text-gray-400 hover:text-app_primary">Contact Us</p>
+              <p className="text-lg leading-none text-gray-400 hover:text-app_primary">
+                Contact Us
+              </p>
             </div>
-             <div className="flex items-center gap-1  cursor-pointer ">
-
+            <div className="flex items-center gap-1  cursor-pointer ">
               <svg
                 className="w-5 h-5 flex-shrink-0"
                 viewBox="0 0 18 18"
@@ -270,10 +269,11 @@ const Footer = () => {
                   strokeLinejoin="round"
                 />
               </svg>
-              <p className="text-lg leading-none text-gray-400 hover:text-app_primary">Donations</p>
+              <p className="text-lg leading-none text-gray-400 hover:text-app_primary">
+                Donations
+              </p>
             </div>
-             <div className="flex items-center gap-1  cursor-pointer ">
-
+            <div className="flex items-center gap-1  cursor-pointer ">
               <svg
                 className="w-5 h-5 flex-shrink-0"
                 viewBox="0 0 18 18"
@@ -288,10 +288,11 @@ const Footer = () => {
                   strokeLinejoin="round"
                 />
               </svg>
-              <p className="text-lg leading-none text-gray-400 hover:text-app_primary">Faq</p>
+              <p className="text-lg leading-none text-gray-400 hover:text-app_primary">
+                Faq
+              </p>
             </div>
-             <div className="flex items-center gap-1  cursor-pointer ">
-
+            <div className="flex items-center gap-1  cursor-pointer ">
               <svg
                 className="w-5 h-5 flex-shrink-0"
                 viewBox="0 0 18 18"
@@ -306,29 +307,34 @@ const Footer = () => {
                   strokeLinejoin="round"
                 />
               </svg>
-              <p className="text-lg leading-none text-gray-400 hover:text-app_primary">Careers</p>
+              <p className="text-lg leading-none text-gray-400 hover:text-app_primary">
+                Careers
+              </p>
             </div>
-            
-            
           </div>
         </div>
-        
-         <div className="flex flex-col gap-6 w-full">
+
+        <div className="flex flex-col gap-6 w-full">
           <h2 className="text-white text-3xl font-bold ">News Letter</h2>
 
-         <p className="text-gray-400 text-lg">Subscribe Our Newsletter</p>
+          <p className="text-gray-400 text-lg">Subscribe Our Newsletter</p>
 
-         <input type="text" className="cursor-pointer bg-[#062216]  text-white p-4  border border-t-app_primary border-3 w-full rounded-full " placeholder="Enter Your E-Mail*" />
+          <input
+            type="text"
+            className="cursor-pointer bg-[#062216]  text-white p-4  border border-t-app_primary border-3 w-full rounded-full "
+            placeholder="Enter Your E-Mail*"
+          />
 
-
-         <input type="submit" value="SUBSCRIBE ->" className="bg-app_primary text-white text-xl rounded-full w-full p-4 cursor-pointer hover:bg-[#062216] " />
+          <input
+            type="submit"
+            value="SUBSCRIBE ->"
+            className="bg-app_primary text-white text-xl rounded-full w-full p-4 cursor-pointer hover:bg-[#062216] "
+          />
         </div>
-
-
       </div>
-      {/* <div className="w-full h-full flex items-center justify-center text-white">
-        <p className="text-lg">© 2025 Echofy – All Rights Reserved</p>
-      </div> */}
+      <div className="w-full h-full flex items-center justify-center text-white">
+        <p className="text-lg text-white">© 2025 Echofy – All Rights Reserved by <span className="text-app_primary cursor-pointer">Muhammad Yaqoob</span></p>
+      </div>
     </footer>
   );
 };

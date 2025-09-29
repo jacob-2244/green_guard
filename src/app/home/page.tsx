@@ -11,10 +11,6 @@ import ProcessCard from "@/components/ProcessCard";
 import ProgressBar from "@/components/ProgressBar";
 import DeveloperCarousel from "@/components/DeveloperCarousel";
 
-
-
-
-
 import {
   Carousel,
   CarouselContent,
@@ -26,6 +22,7 @@ import {
 
 import MemberCard from "@/components/MemberCard";
 import WorkerTeam from "@/components/WorkerTeam";
+import Footer from "@/components/Footer";
 
 const ProcessCards = [
   {
@@ -153,13 +150,7 @@ export default function Home() {
   const [showScrollTop, setShowScrollTop] = useState(false);
 
   const [currentBackground, setCurrent] = useState("/images/banner-bg.jpg");
- 
 
-
-
-  
-
- 
   useEffect(() => {
     const handleScroll = () => {
       setShowScrollTop(window.scrollY > 0);
@@ -169,7 +160,6 @@ export default function Home() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  
   useEffect(() => {
     console.log("background is changing");
   });
@@ -181,11 +171,6 @@ export default function Home() {
   const applySecondBackground = () => {
     setCurrent("/images/banner-bg2.jpg");
   };
-
-
- 
-
-
 
   //   // Background transition handlers
   // const applyFirstBackground = () => {
@@ -207,8 +192,6 @@ export default function Home() {
   //     setIsTransitioning(false);
   //   }, 500);
   // }
-
-
 
   return (
     <>
@@ -307,8 +290,6 @@ export default function Home() {
                 data-aos="fade-right"
                 data-aos-delay="1400"
               >
-            
-
                 <Link
                   href="#"
                   className="shrink-0 relative z-0 w-fit overflow-hidden rounded-full bg-app_primary px-10 py-4 text-white transition-colors duration-500 group"
@@ -391,7 +372,7 @@ export default function Home() {
           backgroundBlendMode: "multiply",
         }}
       >
-        <div className="mx-auto flex relative gap-20 px-40 py-20 w-full max-w-screen-2xl ">
+        <div className="mx-auto flex relative gap-20 px-40 py-28 w-full max-w-screen-2xl ">
           <div className="relative w-full">
             <Image src="/images/about.png" alt="" height={400} width={600} />
             <div className="absolute bottom-2 animate-[bounce_2s_infinite]">
@@ -503,7 +484,7 @@ export default function Home() {
           backgroundImage: `url('/images/service-bg.jpg')`,
         }}
       >
-        <div className="mx-auto flex flex-col  gap-5 px-40 py-20 w-full max-w-screen-2xl">
+        <div className="mx-auto flex flex-col  gap-5 px-40 py-28 w-full max-w-screen-2xl">
           <div className="flex gap-2">
             <Image
               src="/images/sub-title-shape.png"
@@ -611,7 +592,7 @@ export default function Home() {
           backgroundColor: "#F5F8ED",
         }}
       >
-        <div className="mx-auto flex gap-14 justify-between px-40 py-20 w-full max-w-screen-2xl ">
+        <div className="mx-auto flex gap-14 justify-between px-40 py-28 w-full max-w-screen-2xl ">
           <div className="flex flex-col gap-6 py-10 w-full  ">
             <div className="flex gap-2">
               <Image
@@ -744,7 +725,7 @@ export default function Home() {
           backgroundImage: `url('/images/counter-bg.png')`,
         }}
       >
-        <div className="flex justify-evenly py-20 max-w-screen-2xl   text-center mx-auto">
+        <div className="flex justify-evenly py-28 max-w-screen-2xl   text-center mx-auto">
           <div className="flex flex-col gap-4 text-white">
             <Image
               src="/images/counter-icon.png"
@@ -804,7 +785,7 @@ export default function Home() {
 
         // }}
       >
-        <div className="mx-auto flex flex-col  gap-5 px-40 py-20 w-full max-w-screen-2xl ">
+        <div className="mx-auto flex flex-col  gap-5 px-40 py-28 w-full max-w-screen-2xl ">
           <div className="flex gap-2">
             <Image
               src="/images/sub-title-shape.png"
@@ -905,7 +886,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="flex flex-col  gap-8  items-center py-20 w-full max-w-screen-2xl  mx-auto">
+        <div className="flex flex-col  gap-8  items-center pb-28 w-full max-w-screen-2xl  mx-auto">
           <div className="flex flex-col gap-3">
             <div className="flex gap-2 text-center w-full justify-center">
               <Image
@@ -918,80 +899,83 @@ export default function Home() {
             </div>
 
             <div className="flex w-full text-center">
-              <h2 className="w-full font-AlbertSans font-bold text-[22px] leading-8 sm:text-[38px] sm:leading-[48px] md:text-[44px] md:leading-[54px] lg:text-[32px] lg:leading-[42px] xl:text-[40px] xl:leading-[50px] 2xl:text-[46px] 2xl:leading-[56px] text-HeadingColor-0 ">
+              <h2 className="w-full font-AlbertSans font-semibold text-[22px] leading-8 sm:text-[38px] sm:leading-[48px] md:text-[44px] md:leading-[54px] lg:text-[32px] lg:leading-[42px] xl:text-[40px] xl:leading-[50px] 2xl:text-[46px] 2xl:leading-[56px] text-HeadingColor-0 ">
                 Process To Safe Environment
               </h2>
             </div>
           </div>
 
-          <div className=" grid grid-cols-1 w-full max-w-screen-2xl px-40 md:grid-cols-2 lg:grid-cols-3 h-full ">
-            <div className="w-full flex flex-col gap-2 items-center text-center">
-              <div className="flex">
-                <div className="relative w-52 h-52 flex items-center justify-center">
-                  <div className="absolute inset-0 rounded-full border-4 border-dotted border-app_primary animate-spin-slow z-0"></div>
+          <div className=" flex justify-evenly w-full px-40 pt-10 ">
+            <div className="w-full flex flex-col gap-12  ">
+              <div className="relative w-full">
+                <div className=" w-56 h-56 absolute inset-0 rounded-full border-4 border-dotted border-app_primary animate-spin-slow z-0 items-center"></div>
 
-                  <div className="relative w-52 h-52">
-                    <Image
-                      src="/images/process-icon.png"
-                      alt="Process Icon"
-                      fill
-                      className="object-contain relative z-10"
-                    />
-                  </div>
-                </div>
-
-                <div className="translate-x-12 shrink-0 relative w-full h-[30px] items-center   my-auto">
+                <div className="relative w-52 h-52 mx-auto my-auto ml-2">
                   <Image
-                    src="/images/process-arrow.png"
-                    alt=""
+                    src="/images/process-icon.png"
+                    alt="Process Icon"
                     fill
-                    className="relative"
+                    className="object-contain relative z-10"
                   />
                 </div>
               </div>
 
-              <h2 className="text-2xl font-semibold">Collection Dust</h2>
-              <p className="text-md text-gray-600 px-10">
-                Proactively drive maintainable value next mission-critical
-                infrastructures eggplant new environmental nature
-              </p>
+              <div className="flex flex-col gap-3 w-full text-center  ">
+                <h2 className="text-2xl font-semibold">Collection Dust</h2>
+                <p className=" text-gray-600  ">
+                  Proactively drive maintainable value next mission-critical
+                  infrastructures eggplant new environmental nature
+                </p>
+              </div>
             </div>
-            <div className="w-full flex flex-col gap-2 items-center text-center">
-              <div className="flex">
-                <div className="relative w-52 h-52 flex items-center justify-center">
-                  <div className="absolute inset-0 rounded-full border-4 border-dotted border-app_primary animate-spin-slow z-0"></div>
+             <div className="h-[200px] w-full  text-center justify-center flex ">
+              <div className="shrink-0 relative w-40 h-[30px] items-center my-auto">
+                <Image
+                  src="/images/process-arrow.png"
+                  alt=""
+                  fill
+                  className="relative"
+                />
+              </div>
+            </div>
 
-                  <div className="relative w-52 h-52">
-                    <Image
-                      src="/images/process-icon2.png"
-                      alt="Process Icon"
-                      fill
-                      className="object-contain relative z-10"
-                    />
-                  </div>
-                </div>
+            <div className="w-full flex flex-col gap-12 items-center ">
+              <div className="relative   flex items-center justify-center text-center  ">
+                <div className=" w-56 h-56 absolute inset-0 rounded-full border-4 border-dotted border-app_primary animate-spin-slow z-0 items-center"></div>
 
-                <div className="translate-x-12 shrink-0 relative w-full h-[30px] items-center   my-auto">
+                <div className="relative w-52 h-52 mx-auto my-auto ml-2">
                   <Image
-                    src="/images/process-arrow2.png"
-                    alt=""
+                    src="/images/process-icon2.png"
+                    alt="Process Icon"
                     fill
-                    className="relative"
+                    className="object-contain relative z-10"
                   />
                 </div>
               </div>
 
-              <h2 className="text-2xl font-semibold">Dust Recycling</h2>
-              <p className="text-md text-gray-600 px-10">
-                Proactively drive maintainable value next mission-critical
-                infrastructures eggplant new environmental nature
-              </p>
+              <div className="flex flex-col gap-3 w-full text-center">
+                <h2 className="text-2xl font-semibold">Dust Recycling</h2>
+                <p className="text-md text-gray-600  ">
+                  Proactively drive maintainable value next mission-critical
+                  infrastructures eggplant new environmental nature
+                </p>
+              </div>
             </div>
+            <div className="h-[200px] w-full  text-center justify-center flex ">
+              <div className="shrink-0 relative w-40 h-[30px] items-center my-auto">
+                <Image
+                  src="/images/process-arrow2.png"
+                  alt=""
+                  fill
+                  className="relative"
+                />
+              </div>
+            </div>
+            <div className="w-full flex flex-col gap-12 items-center ">
+              <div className="relative   flex items-center justify-center text-center  ">
+                <div className=" w-56 h-56 absolute inset-0 rounded-full border-4 border-dotted border-app_primary animate-spin-slow z-0 items-center"></div>
 
-            <div className="w-full flex flex-col gap-2 items-center text-center">
-              <div className="relative w-52 h-52 flex items-center justify-center">
-                <div className="absolute inset-0 rounded-full border-4 border-dotted border-app_primary animate-spin-slow z-0"></div>
-                <div className="relative w-52 h-52">
+                <div className="relative w-52 h-52 mx-auto my-auto ml-2">
                   <Image
                     src="/images/process-icon3.png"
                     alt="Process Icon"
@@ -1000,18 +984,21 @@ export default function Home() {
                   />
                 </div>
               </div>
-              <h2 className="text-2xl font-semibold">Clean Energy</h2>
-              <p className="text-md text-gray-600 px-10">
-                Proactively drive maintainable value next mission-critical
-                infrastructures eggplant new environmental nature
-              </p>
+
+              <div className="flex flex-col gap-3 w-full text-center ">
+                <h2 className="text-2xl font-semibold">Cleaning Environment</h2>
+                <p className="text-md text-gray-600  ">
+                  Proactively drive maintainable value next mission-critical
+                  infrastructures eggplant new environmental nature
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* ================= TESTIMONIALS SECTION ================= */}
-      <section className="flex w-full relative pb-80 bg-[#F5F8ED] z-10">
+      <section className="flex w-full relative pb-64 bg-[#F5F8ED] z-10">
         {/* left shape */}
         <div className="w-12 h-12 absolute left-40 top-44 animate-zoom-pulse">
           <Image src="/images/testi-shape-3.png" alt="" fill />
@@ -1034,7 +1021,7 @@ export default function Home() {
           </div>
 
           {/* section heading */}
-          <div className="w-full flex flex-col gap-3">
+          <div className="w-full flex flex-col gap-3 mt-4  ">
             <div className="flex gap-2 text-center w-full justify-center">
               <Image
                 src="/images/sub-title-shape.png"
@@ -1046,7 +1033,7 @@ export default function Home() {
             </div>
 
             <div className="flex w-full text-center">
-              <h2 className="mx-auto w-[700px] font-AlbertSans font-bold text-[22px] leading-8 sm:text-[38px] sm:leading-[48px] md:text-[44px] md:leading-[54px] lg:text-[32px] lg:leading-[42px] xl:text-[40px] xl:leading-[50px] 2xl:text-[46px] 2xl:leading-[56px] text-HeadingColor-0">
+              <h2 className="mx-auto w-[700px] font-AlbertSans font-semibold text-[22px] leading-8 sm:text-[38px] sm:leading-[48px] md:text-[44px] md:leading-[54px] lg:text-[32px] lg:leading-[42px] xl:text-[40px] xl:leading-[50px] 2xl:text-[46px] 2xl:leading-[56px] text-HeadingColor-0">
                 Clients Best Feedback About Echofy Provission
               </h2>
             </div>
@@ -1065,73 +1052,73 @@ export default function Home() {
       </section>
 
       {/* ================= BRAND SECTION ================= */}
-      <section
-        className="  w-full flex max-w-screen-xl h-[300px] flex-col items-center justify-center mx-auto relative z-40 -mt-[150px]"
-        style={{
-          backgroundImage: `url('/images/brand-bg.jpg')`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
-        
-        <div className="w-full flex items-center gap-4 text-center mb-10 justify-center">
-          <hr className="w-20 border-white" />
-          <p className="text-3xl text-white font-semibold">
-            All over the world 100,000+ Customers
-          </p>
-          <hr className="w-20 border-white" />
-        </div>
+      <section className=" rounded-lg w-full flex  h-fit flex-col items-center justify-center mx-auto relative z-40 -mt-[150px]">
+        <div
+          className="relative w-full py-20 rounded-lg max-w-screen-xl"
+          style={{
+            backgroundImage: `url('/images/brand-bg.jpg')`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        >
+          <div className="absolute -right-14 -top-14 overflow-hidden -z-40 w-24 h-24 animate-to-and-fro-down">
+            <Image src="/images/brand-shape.png" alt="" fill />
+          </div>
+          <div className="w-full flex items-center gap-4 text-center mb-10 justify-center">
+            <hr className="w-20 border-white" />
+            <p className="text-3xl text-white font-semibold">
+              All over the world 100,000+ Customers
+            </p>
+            <hr className="w-20 border-white" />
+          </div>
 
-        <div className="flex justify-evenly items-center w-full  gap-8">
-          <div className="relative w-48 h-16">
-            <Image
-              src="/images/brand-1.png"
-              alt="brand 1"
-              fill
-              className="object-contain"
-            />
+          <div className="flex justify-evenly items-center w-full  gap-8">
+            <div className="relative w-48 h-16">
+              <Image
+                src="/images/brand-1.png"
+                alt="brand 1"
+                fill
+                className="object-contain"
+              />
+            </div>
+            <div className="relative w-48 h-16">
+              <Image
+                src="/images/brand-2.png"
+                alt="brand 2"
+                fill
+                className="object-contain"
+              />
+            </div>
+            <div className="relative w-48 h-16">
+              <Image
+                src="/images/brand-3.png"
+                alt="brand 3"
+                fill
+                className="object-contain"
+              />
+            </div>
+            <div className="relative w-48 h-16">
+              <Image
+                src="/images/brand-4.png"
+                alt="brand 4"
+                fill
+                className="object-contain"
+              />
+            </div>
+            <div className="relative w-48 h-16">
+              <Image
+                src="/images/brand-5.png"
+                alt="brand 5"
+                fill
+                className="object-contain"
+              />
+            </div>
           </div>
-          <div className="relative w-48 h-16">
-            <Image
-              src="/images/brand-2.png"
-              alt="brand 2"
-              fill
-              className="object-contain"
-            />
-          </div>
-          <div className="relative w-48 h-16">
-            <Image
-              src="/images/brand-3.png"
-              alt="brand 3"
-              fill
-              className="object-contain"
-            />
-          </div>
-          <div className="relative w-48 h-16">
-            <Image
-              src="/images/brand-4.png"
-              alt="brand 4"
-              fill
-              className="object-contain"
-            />
-          </div>
-          <div className="relative w-48 h-16">
-            <Image
-              src="/images/brand-5.png"
-              alt="brand 5"
-              fill
-              className="object-contain"
-            />
-          </div>
-        </div>
-
-        <div className="absolute -right-20 -top-20 overflow-hidden -z-40 w-40 h-40 animate-to-and-fro-down">
-          <Image src="/images/brand-shape.png" alt="" fill />
         </div>
       </section>
 
       <section
-        className="flex w-full mx-auto  relative z-20 h-[1000px]   "
+        className="flex w-full mx-auto  relative z-20 h-fit  pt-48 pb-12 -mt-[150px]   "
         style={{
           backgroundImage: `url("/images/team-bg.jpg ")`,
         }}
@@ -1150,12 +1137,12 @@ export default function Home() {
             </div>
 
             <div className="flex w-full text-center">
-              <h2 className="mx-auto w-[700px] font-AlbertSans font-bold text-[22px] leading-8 sm:text-[38px] sm:leading-[48px] md:text-[44px] md:leading-[54px] lg:text-[32px] lg:leading-[42px] xl:text-[40px] xl:leading-[50px] 2xl:text-[46px] 2xl:leading-[56px] text-HeadingColor-0">
+              <h2 className="mx-auto w-[700px] font-AlbertSans font-semibold text-[22px] leading-8 sm:text-[38px] sm:leading-[48px] md:text-[44px] md:leading-[54px] lg:text-[32px] lg:leading-[42px] xl:text-[40px] xl:leading-[50px] 2xl:text-[46px] 2xl:leading-[56px] text-HeadingColor-0">
                 Meet Our Dedicated Members
               </h2>
             </div>
 
-            <div className="flex justify-evenly gap-10 w-full max-w-screen-2xl">
+            <div className="flex justify-evenly gap-10 w-full max-w-screen-2xl py-8 ">
               {members.map((members, index) => (
                 <MemberCard
                   key={index}
@@ -1169,61 +1156,58 @@ export default function Home() {
         </div>
       </section>
 
-   <section>
-  <div className="mx-auto flex flex-col gap-5 px-40 w-full max-w-screen-2xl h-fit py-20">
-    {/* Subtitle */}
-    <div className="flex gap-2">
-      <Image
-        src="/images/sub-title-shape.png"
-        alt=""
-        width={20}
-        height={10}
-      />
-      <p className="font-medium text-app_primary">LATEST BLOG</p>
-    </div>
+      <section>
+        <div className="mx-auto flex flex-col gap-5 px-40 w-full max-w-screen-2xl h-fit py-20">
+          {/* Subtitle */}
+          <div className="flex gap-2">
+            <Image
+              src="/images/sub-title-shape.png"
+              alt=""
+              width={20}
+              height={10}
+            />
+            <p className="font-medium text-app_primary">LATEST BLOG</p>
+          </div>
 
-   
-    <div className="flex w-full justify-between items-center">
-   <h2 className="w-full font-AlbertSans font-bold text-[22px] leading-8 sm:text-[38px] sm:leading-[48px] md:text-[44px] md:leading-[54px] lg:text-[32px] lg:leading-[42px] xl:text-[40px] xl:leading-[50px] 2xl:text-[46px] 2xl:leading-[56px] text-HeadingColor-0 ">
-            Building a Greener Future Together Forever
+          <div className="flex w-full justify-between items-center">
+            <h2 className="w-full font-AlbertSans font-semibold text-[22px] leading-8 sm:text-[38px] sm:leading-[48px] md:text-[44px] md:leading-[54px] lg:text-[32px] lg:leading-[42px] xl:text-[40px] xl:leading-[50px] 2xl:text-[46px] 2xl:leading-[56px] text-HeadingColor-0 ">
+              Building a Greener Future Together Forever
             </h2>
 
-      <div className="flex justify-end w-full">
-        <Link
-          href="#"
-          className="relative z-0 w-fit overflow-hidden rounded-full bg-app_primary px-10 py-4 text-white transition-colors duration-500 group"
-        >
-       
-          <span className="absolute inset-0 z-0 scale-x-0 origin-left transform bg-black border border-app_primary transition-transform duration-500 group-hover:scale-x-100"></span>
+            <div className="flex justify-end w-full">
+              <Link
+                href="#"
+                className="relative z-0 w-fit overflow-hidden rounded-full bg-app_primary px-10 py-4 text-white transition-colors duration-500 group"
+              >
+                <span className="absolute inset-0 z-0 scale-x-0 origin-left transform bg-black border border-app_primary transition-transform duration-500 group-hover:scale-x-100"></span>
 
-          <div className="relative z-10 flex items-center gap-2">
-            <span>View All Blog</span>
-            <Image
-              src="/images/button-shape-1.png"
-              alt=""
-              width={13}
-              height={5}
-            />
+                <div className="relative z-10 flex items-center gap-2">
+                  <span>View All Blog</span>
+                  <Image
+                    src="/images/button-shape-1.png"
+                    alt=""
+                    width={13}
+                    height={5}
+                  />
+                </div>
+              </Link>
+            </div>
           </div>
-        </Link>
-      </div>
-    </div>
 
- 
-    <div className="w-full flex gap-5">
-      {WorkTeam.map((team, index) => (
-        <WorkerTeam
-          key={index}
-          image={team.image}
-          title={team.title}
-          supervisor={team.supervisor}
-        />
-      ))}
-    </div>
-  </div>
-</section>
+          <div className="w-full flex gap-5 py-10">
+            {WorkTeam.map((team, index) => (
+              <WorkerTeam
+                key={index}
+                image={team.image}
+                title={team.title}
+                supervisor={team.supervisor}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
 
-
+      <Footer />
       <ScrollToTop show={showScrollTop} />
     </>
   );
