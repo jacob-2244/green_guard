@@ -9,7 +9,7 @@ import { useState, useEffect } from "react";
 import ProcessCard from "@/components/ProcessCard";
 import ProgressBar from "@/components/ProgressBar";
 import DeveloperCarousel from "@/components/DeveloperCarousel";
-import ServiceCard2 from "@/components/ServiceCard2";
+import ServiceCard from "@/components/ServiceCard";
 
 
 import {
@@ -572,7 +572,7 @@ export default function Home() {
                     key={index}
                     className="md:basis-1/2 lg:basis-1/3"
                   >
-                    <ServiceCard2
+                    <ServiceCard
                       key={index}
                       image={Cards.image}
                       icon={Cards.icon}
