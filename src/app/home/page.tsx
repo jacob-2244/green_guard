@@ -11,7 +11,6 @@ import ProgressBar from "@/components/ProgressBar";
 import DeveloperCarousel from "@/components/DeveloperCarousel";
 import ServiceCard from "@/components/ServiceCard";
 
-
 import {
   Carousel,
   CarouselContent,
@@ -479,116 +478,114 @@ export default function Home() {
         </div>
       </section>
 
-      
-  <section
-        className=" w-full bg-cover "
-        style={{
-          backgroundImage: `url('/images/service-bg.jpg')`,
-        }}
-      >
-        <div className="mx-auto flex flex-col  gap-5 px-40 py-28 w-full max-w-screen-2xl">
-          <div className="flex gap-2">
-            <Image
-              src="/images/sub-title-shape.png"
-              alt=""
-              width={20}
-              height={10}
-            />
-            <p className="font-medium text-app_primary">OUR SERVICES</p>
-          </div>
+    <section
+  className="w-full bg-cover"
+  style={{
+    backgroundImage: `url('/images/service-bg.jpg')`,
+  }}
+>
+  <div className="mx-auto flex flex-col gap-5 px-40 py-28 w-full max-w-screen-2xl">
+    <div className="flex gap-2">
+      <Image src="/images/sub-title-shape.png" alt="" width={20} height={10} />
+      <p className="font-medium text-app_primary">OUR SERVICES</p>
+    </div>
 
-          <div className=" flex w-full justify-between">
-            <h2 className="w-full font-AlbertSans font-semibold text-[22px] leading-8 sm:text-[38px] sm:leading-[48px] md:text-[44px] md:leading-[54px] lg:text-[32px] lg:leading-[42px] xl:text-[40px] xl:leading-[50px] 2xl:text-[46px] 2xl:leading-[56px] text-HeadingColor-0 ">
-              Echofy Provide Environment Best Leading Services{" "}
-            </h2>
+    <div className="flex w-full justify-between">
+      <h2 className="w-full font-AlbertSans font-semibold text-[22px] leading-8 sm:text-[38px] sm:leading-[48px] md:text-[44px] md:leading-[54px] lg:text-[32px] lg:leading-[42px] xl:text-[40px] xl:leading-[50px] 2xl:text-[46px] 2xl:leading-[56px] text-HeadingColor-0">
+        Echofy Provide Environment Best Leading Services
+      </h2>
 
-            <div className="flex gap-4 justify-end w-full">
-              {/* Left Arrow */}
-              <div className="group flex h-12 w-12 items-center justify-center rounded-full bg-app_primary text-white transition-colors duration-300 hover:bg-gray-200 hover:text-app_primary hover:cursor-pointer">
-                <div className="relative h-6 w-6">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-                    <g
-                      id="SVGRepo_tracerCarrier"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    ></g>
-                    <g id="SVGRepo_iconCarrier">
-                      <path
-                        fillRule="evenodd"
-                        clipRule="evenodd"
-                        d="M11.7071 4.29289C12.0976 4.68342 12.0976 5.31658 11.7071 5.70711L6.41421 11H20C20.5523 11 21 11.4477 21 12C21 12.5523 20.5523 13 20 13H6.41421L11.7071 18.2929C12.0976 18.6834 12.0976 19.3166 11.7071 19.7071C11.3166 20.0976 10.6834 20.0976 10.2929 19.7071L3.29289 12.7071C3.10536 12.5196 3 12.2652 3 12C3 11.7348 3.10536 11.4804 3.29289 11.2929L10.2929 4.29289C10.6834 3.90237 11.3166 3.90237 11.7071 4.29289Z"
-                        fill="currentColor"
-                      ></path>
-                    </g>
-                  </svg>
-                </div>
-              </div>
-
-              {/* Right Arrow */}
-              <div className="group flex h-12 w-12 items-center justify-center rounded-full bg-gray-200 text-app_primary transition-colors duration-300 hover:bg-app_primary hover:text-white hover:cursor-pointer">
-                <div className="relative h-6 w-6">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-                    <g
-                      id="SVGRepo_tracerCarrier"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    ></g>
-                    <g id="SVGRepo_iconCarrier">
-                      <path
-                        fillRule="evenodd"
-                        clipRule="evenodd"
-                        d="M12.2929 4.29289C12.6834 3.90237 13.3166 3.90237 13.7071 4.29289L20.7071 11.2929C21.0976 11.6834 21.0976 12.3166 20.7071 12.7071L13.7071 19.7071C13.3166 20.0976 12.6834 20.0976 12.2929 19.7071C11.9024 19.3166 11.9024 18.6834 12.2929 18.2929L17.5858 13H4C3.44772 13 3 12.5523 3 12C3 11.4477 3.44772 11 4 11H17.5858L12.2929 5.70711C11.9024 5.31658 11.9024 4.68342 12.2929 4.29289Z"
-                        fill="currentColor"
-                      ></path>
-                    </g>
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </div>
-          <hr />
-
-          <div className="w-full  ">
-            <Carousel
-              opts={{
-                align: "start",
-                loop: true,
-              }}
-              className="w-full  justify-center"
+      <div className="flex gap-4 justify-end w-full">
+        {/* Left Arrow (original) */}
+        <div className="group flex h-12 w-12 items-center justify-center rounded-full bg-app_primary text-white transition-colors duration-300 hover:bg-gray-200 hover:text-app_primary hover:cursor-pointer">
+          <div className="relative h-6 w-6">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <CarouselContent>
-                {ServiceCards.map((Cards, index) => (
-                  <CarouselItem
-                    key={index}
-                    className="md:basis-1/2 lg:basis-1/3"
-                  >
-                    <ServiceCard
-                      key={index}
-                      image={Cards.image}
-                      icon={Cards.icon}
-                      title={Cards.title}
-                    />
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <CarouselPrevious />
-              <CarouselNext />
-            </Carousel>
+              <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <path
+                  fillRule="evenodd"
+                  clipRule="evenodd"
+                  d="M11.7071 4.29289C12.0976 4.68342 12.0976 5.31658 11.7071 5.70711L6.41421 11H20C20.5523 11 21 11.4477 21 12C21 12.5523 20.5523 13 20 13H6.41421L11.7071 18.2929C12.0976 18.6834 12.0976 19.3166 11.7071 19.7071C11.3166 20.0976 10.6834 20.0976 10.2929 19.7071L3.29289 12.7071C3.10536 12.5196 3 12.2652 3 12C3 11.7348 3.10536 11.4804 3.29289 11.2929L10.2929 4.29289C10.6834 3.90237 11.3166 3.90237 11.7071 4.29289Z"
+                  fill="currentColor"
+                ></path>
+              </g>
+            </svg>
           </div>
         </div>
-      </section>
 
+        {/* Right Arrow (original) */}
+        <div className="group flex h-12 w-12 items-center justify-center rounded-full bg-gray-200 text-app_primary transition-colors duration-300 hover:bg-app_primary hover:text-white hover:cursor-pointer">
+          <div className="relative h-6 w-6">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <path
+                  fillRule="evenodd"
+                  clipRule="evenodd"
+                  d="M12.2929 4.29289C12.6834 3.90237 13.3166 3.90237 13.7071 4.29289L20.7071 11.2929C21.0976 11.6834 21.0976 12.3166 20.7071 12.7071L13.7071 19.7071C13.3166 20.0976 12.6834 20.0976 12.2929 19.7071C11.9024 19.3166 11.9024 18.6834 12.2929 18.2929L17.5858 13H4C3.44772 13 3 12.5523 3 12C3 11.4477 3.44772 11 4 11H17.5858L12.2929 5.70711C11.9024 5.31658 11.9024 4.68342 12.2929 4.29289Z"
+                  fill="currentColor"
+                ></path>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
 
+    <hr />
+
+    <div className="w-full">
+      <Carousel
+        opts={{
+          align: "start",
+          loop: true,
+        }}
+        className="w-full justify-center"
+      >
+        <CarouselContent>
+          {ServiceCards.map((Cards, index) => (
+            <CarouselItem
+              key={index}
+              className="
+                w-full 
+                sm:basis-1/1    /* 1 card on small screens */
+                md:basis-1/2    /* 2 cards on medium screens */
+                lg:basis-1/3    /* 3 cards on large screens */
+              "
+            >
+              <ServiceCard
+                key={index}
+                image={Cards.image}
+                icon={Cards.icon}
+                title={Cards.title}
+              />
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+        <CarouselPrevious />
+        <CarouselNext />
+      </Carousel>
+    </div>
+  </div>
+</section>
 
 
       <section
@@ -793,8 +790,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-   
 
       <section
         className=" relative w-full bg-cover "
@@ -1016,54 +1011,57 @@ export default function Home() {
       </section>
 
       {/* ================= TESTIMONIALS SECTION ================= */}
-     
-<section className="flex w-full relative pb-64 bg-[#F5F8ED] z-10">
-  {/* left shape */}
-  <div className="w-12 h-12 absolute left-40 top-44 animate-zoom-pulse">
-    <Image src="/images/testi-shape-3.png" alt="" fill />
-  </div>
 
-  <div
-    className="flex flex-col w-full max-w-screen-2xl mx-auto px-6 sm:px-10 md:px-16 lg:px-40"
-    style={{
-      backgroundImage: `url('/images/map.png')`,
-    }}
-  >
+      <section className="flex w-full relative pb-64 bg-[#F5F8ED] z-10">
+        {/* left shape */}
+        <div className="w-12 h-12 absolute left-40 top-44 animate-zoom-pulse">
+          <Image src="/images/testi-shape-3.png" alt="" fill />
+        </div>
 
-    <div className="flex justify-between w-full relative h-[100px]">
-      <div className="w-10 h-10 absolute left-0 top-20 animate-zoom-pulse-small">
-        <Image src="/images/testi-shape-4.png" alt="" fill />
-      </div>
-      <div className="w-10 h-10 absolute right-0 top-20 animate-zoom-pulse-small">
-        <Image src="/images/testi-shape-2.png" alt="" fill />
-      </div>
-    </div>
+        <div
+          className="flex flex-col w-full max-w-screen-2xl mx-auto px-6 sm:px-10 md:px-16 lg:px-40"
+          style={{
+            backgroundImage: `url('/images/map.png')`,
+          }}
+        >
+          <div className="flex justify-between w-full relative h-[100px]">
+            <div className="w-10 h-10 absolute left-0 top-20 animate-zoom-pulse-small">
+              <Image src="/images/testi-shape-4.png" alt="" fill />
+            </div>
+            <div className="w-10 h-10 absolute right-0 top-20 animate-zoom-pulse-small">
+              <Image src="/images/testi-shape-2.png" alt="" fill />
+            </div>
+          </div>
 
-    <div className="w-full flex flex-col gap-3 mt-4">
-      <div className="flex gap-2 text-center w-full justify-center">
-        <Image src="/images/sub-title-shape.png" alt="" width={20} height={10} />
-        <p className="font-medium text-app_primary">TESTIMONIALS</p>
-      </div>
+          <div className="w-full flex flex-col gap-3 mt-4">
+            <div className="flex gap-2 text-center w-full justify-center">
+              <Image
+                src="/images/sub-title-shape.png"
+                alt=""
+                width={20}
+                height={10}
+              />
+              <p className="font-medium text-app_primary">TESTIMONIALS</p>
+            </div>
 
-      <div className="flex w-full text-center">
-        <h2 className="mx-auto w-[700px] font-AlbertSans font-semibold text-[22px] leading-8 sm:text-[38px] sm:leading-[48px] md:text-[44px] md:leading-[54px] lg:text-[32px] lg:leading-[42px] xl:text-[40px] xl:leading-[50px] 2xl:text-[46px] 2xl:leading-[56px] text-HeadingColor-0">
-          Clients Best Feedback About Echofy Provission
-        </h2>
-      </div>
-    </div>
+            <div className="flex w-full text-center">
+              <h2 className="mx-auto w-[700px] font-AlbertSans font-semibold text-[22px] leading-8 sm:text-[38px] sm:leading-[48px] md:text-[44px] md:leading-[54px] lg:text-[32px] lg:leading-[42px] xl:text-[40px] xl:leading-[50px] 2xl:text-[46px] 2xl:leading-[56px] text-HeadingColor-0">
+                Clients Best Feedback About Echofy Provission
+              </h2>
+            </div>
+          </div>
 
-    {/* carousel */}
-    <div className="w-full mt-10">
-      <DeveloperCarousel developers={developers} />
-    </div>
-  </div>
+          {/* carousel */}
+          <div className="w-full mt-10">
+            <DeveloperCarousel developers={developers} />
+          </div>
+        </div>
 
-  {/* right shape */}
-  <div className="w-12 h-12 absolute right-40 top-44 animate-zoom-pulse">
-    <Image src="/images/testi-shape-1.png" alt="" fill />
-  </div>
-</section>
-
+        {/* right shape */}
+        <div className="w-12 h-12 absolute right-40 top-44 animate-zoom-pulse">
+          <Image src="/images/testi-shape-1.png" alt="" fill />
+        </div>
+      </section>
 
       {/* ================= BRAND SECTION ================= */}
       <section className=" rounded-lg w-full flex  h-fit flex-col items-center justify-center mx-auto relative z-40 -mt-[150px]">
@@ -1131,78 +1129,90 @@ export default function Home() {
         </div>
       </section>
 
-     <section
-  className="flex w-full relative z-20 h-fit pt-48 pb-12 -mt-[150px]"
-  style={{ backgroundImage: `url("/images/team-bg.jpg")` }}
->
-  <div className="py-20 w-full max-w-screen-2xl px-6 sm:px-10 md:px-16 lg:px-40 mx-auto">
-   
-    <div className="w-full flex flex-col gap-5">
-      <div className="flex gap-2 justify-center w-full text-center">
-        <Image src="/images/sub-title-shape.png" alt="" width={20} height={10} />
-        <p className="font-medium text-app_primary">OUR TEAM</p>
-      </div>
-
-      <div className="flex w-full justify-center text-center">
-        <h2 className="mx-auto w-full max-w-[700px] font-AlbertSans font-semibold text-[22px] leading-8 sm:text-[38px] sm:leading-[48px] md:text-[44px] md:leading-[54px] lg:text-[32px] lg:leading-[42px] xl:text-[40px] xl:leading-[50px] 2xl:text-[46px] 2xl:leading-[56px] text-HeadingColor-0">
-          Meet Our Dedicated Members
-        </h2>
-      </div>
-
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 w-full py-8">
-        {members.map((member, index) => (
-          <MemberCard
-            key={index}
-            image={member.image}
-            name={member.name}
-            position={member.position}
-          />
-        ))}
-      </div>
-    </div>
-  </div>
-</section>
-
-<section className="mx-auto flex flex-col gap-5 px-6 sm:px-10 md:px-16 lg:px-40 w-full max-w-screen-2xl h-fit py-20">
-  {/* Subtitle */}
-  <div className="flex gap-2">
-    <Image src="/images/sub-title-shape.png" alt="" width={20} height={10} />
-    <p className="font-medium text-app_primary">LATEST BLOG</p>
-  </div>
-
-  {/* Heading + Button */}
-  <div className="flex flex-col lg:flex-row w-full justify-between items-start lg:items-center gap-4">
-    <h2 className="w-full font-AlbertSans font-semibold text-[22px] leading-8 sm:text-[38px] sm:leading-[48px] md:text-[44px] md:leading-[54px] lg:text-[32px] lg:leading-[42px] xl:text-[40px] xl:leading-[50px] 2xl:text-[46px] 2xl:leading-[56px] text-HeadingColor-0">
-      Building a Greener Future Together Forever
-    </h2>
-
-    <div className="flex justify-start lg:justify-end w-full">
-      <Link
-        href="#"
-        className="relative z-0 w-fit overflow-hidden rounded-full bg-app_primary px-10 py-4 text-white transition-colors duration-500 group"
+      <section
+        className="flex w-full relative z-20 h-fit pt-48 pb-12 -mt-[150px]"
+        style={{ backgroundImage: `url("/images/team-bg.jpg")` }}
       >
-        <span className="absolute inset-0 z-0 scale-x-0 origin-left transform bg-black border border-app_primary transition-transform duration-500 group-hover:scale-x-100"></span>
-        <div className="relative z-10 flex items-center gap-2">
-          <span>View All Blog</span>
-          <Image src="/images/button-shape-1.png" alt="" width={13} height={5} />
+        <div className="py-20 w-full max-w-screen-2xl px-6 sm:px-10 md:px-16 lg:px-40 mx-auto">
+          <div className="w-full flex flex-col gap-5">
+            <div className="flex gap-2 justify-center w-full text-center">
+              <Image
+                src="/images/sub-title-shape.png"
+                alt=""
+                width={20}
+                height={10}
+              />
+              <p className="font-medium text-app_primary">OUR TEAM</p>
+            </div>
+
+            <div className="flex w-full justify-center text-center">
+              <h2 className="mx-auto w-full max-w-[700px] font-AlbertSans font-semibold text-[22px] leading-8 sm:text-[38px] sm:leading-[48px] md:text-[44px] md:leading-[54px] lg:text-[32px] lg:leading-[42px] xl:text-[40px] xl:leading-[50px] 2xl:text-[46px] 2xl:leading-[56px] text-HeadingColor-0">
+                Meet Our Dedicated Members
+              </h2>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 w-full py-8">
+              {members.map((member, index) => (
+                <MemberCard
+                  key={index}
+                  image={member.image}
+                  name={member.name}
+                  position={member.position}
+                />
+              ))}
+            </div>
+          </div>
         </div>
-      </Link>
-    </div>
-  </div>
+      </section>
 
- 
-  <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 py-10">
-    {WorkTeam.map((team, index) => (
-      <WorkerTeam
-        key={index}
-        image={team.image}
-        title={team.title}
-        supervisor={team.supervisor}
-      />
-    ))}
-  </div>
-</section>
+      <section className="mx-auto flex flex-col gap-5 px-6 sm:px-10 md:px-16 lg:px-40 w-full max-w-screen-2xl h-fit py-20">
+        {/* Subtitle */}
+        <div className="flex gap-2">
+          <Image
+            src="/images/sub-title-shape.png"
+            alt=""
+            width={20}
+            height={10}
+          />
+          <p className="font-medium text-app_primary">LATEST BLOG</p>
+        </div>
 
+        {/* Heading + Button */}
+        <div className="flex flex-col lg:flex-row w-full justify-between items-start lg:items-center gap-4">
+          <h2 className="w-full font-AlbertSans font-semibold text-[22px] leading-8 sm:text-[38px] sm:leading-[48px] md:text-[44px] md:leading-[54px] lg:text-[32px] lg:leading-[42px] xl:text-[40px] xl:leading-[50px] 2xl:text-[46px] 2xl:leading-[56px] text-HeadingColor-0">
+            Building a Greener Future Together Forever
+          </h2>
+
+          <div className="flex justify-start lg:justify-end w-full">
+            <Link
+              href="#"
+              className="relative z-0 w-fit overflow-hidden rounded-full bg-app_primary px-10 py-4 text-white transition-colors duration-500 group"
+            >
+              <span className="absolute inset-0 z-0 scale-x-0 origin-left transform bg-black border border-app_primary transition-transform duration-500 group-hover:scale-x-100"></span>
+              <div className="relative z-10 flex items-center gap-2">
+                <span>View All Blog</span>
+                <Image
+                  src="/images/button-shape-1.png"
+                  alt=""
+                  width={13}
+                  height={5}
+                />
+              </div>
+            </Link>
+          </div>
+        </div>
+
+        <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 py-10">
+          {WorkTeam.map((team, index) => (
+            <WorkerTeam
+              key={index}
+              image={team.image}
+              title={team.title}
+              supervisor={team.supervisor}
+            />
+          ))}
+        </div>
+      </section>
 
       <Footer />
       <ScrollToTop show={showScrollTop} />
