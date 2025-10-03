@@ -100,16 +100,17 @@
 
 
 
-import ServiceCard from '@/components/ServiceCard'
+
 import ProgressBar from '@/components/ProgressBar'
 import React from 'react'
 import ProcessCard from '@/components/ProcessCard'
 import DeveloperCard from '@/components/DeveloperCard'
-import dynamic from 'next/dynamic'
 import DeveloperCarousel from '@/components/DeveloperCarousel'
 import MemberCard from '@/components/MemberCard'
 import WorkerTeam from '@/components/WorkerTeam'
 import Footer from '@/components/Footer'
+import ServiceCard2 from '@/components/ServiceCard2'
+import AccordionUsage from '@/components/AccordionUsage'
 
 
 
@@ -137,16 +138,16 @@ const developers = [
     },
   ]
 
-const SyncfusionCarousel = dynamic(() => import('@/components/SyncfusionCarousel'), {
-  ssr: false
-});
+// const SyncfusionCarousel = dynamic(() => import('@/components/SyncfusionCarousel'), {
+//   ssr: false
+// });
 
 const page = () => {
   return (
     <>    <div className='w-full max-w-screen-sm min-h-200'>
-      <ServiceCard
-        image='/images/service-thumb.png'
-        icon='/images/service-icon1.png'
+      <ServiceCard2
+        image='/images/services-thumb.png'
+        icon='/images/service2-icon.png'
         title='Tree Plantation'
       />
 
@@ -178,8 +179,8 @@ const page = () => {
         name='Angelina Watson'
         position='Web Developer'
       />
-
-      <SyncfusionCarousel />
+{/* 
+      <SyncfusionCarousel /> */}
 
 
         <DeveloperCarousel developers={developers} />
@@ -203,6 +204,8 @@ const page = () => {
 
 
 
+
+<AccordionUsage/>
   <Footer/>
     </>
 

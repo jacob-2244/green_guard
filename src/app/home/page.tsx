@@ -6,10 +6,11 @@ import Link from "next/link";
 import "aos/dist/aos.css";
 import dynamic from "next/dynamic";
 import { useState, useEffect } from "react";
-import ServiceCard from "@/components/ServiceCard";
 import ProcessCard from "@/components/ProcessCard";
 import ProgressBar from "@/components/ProgressBar";
 import DeveloperCarousel from "@/components/DeveloperCarousel";
+import ServiceCard2 from "@/components/ServiceCard2";
+
 
 import {
   Carousel,
@@ -196,15 +197,15 @@ export default function Home() {
   return (
     <>
       <section
-        className="flex flex-col relative min-h-screen w-full bg-cover bg-center bg-no-repeat"
+        className="flex flex-col relative  h-fit 2xl:min-h-screen w-full bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url('${currentBackground}')` }}
       >
         <Header2 />
 
-        <div className="flex justify-between w-full gap-10  items-center  mx-auto my-auto max-w-screen-2xl    ">
-          <div className="flex gap-10 w-full ">
+        <div className=" py-40 2xl:py-0 flex justify-between items-center gap-10 w-full mx-auto my-auto px-4 sm:px-6 lg:px-20">
+          <div className="flex flex-col md:flex-row  md:gap-10 w-full ">
             <div
-              className="flex flex-col items-center gap-10 opacity-90 p-6"
+              className=" hidden md:flex flex-col items-center gap-10 opacity-90 p-6"
               data-aos="fade-up"
               data-aos-delay="1500"
             >
@@ -234,9 +235,7 @@ export default function Home() {
                   />
                 </div>
               </div>
-              <div>
-                <hr className="rotate-90 w-14 border-t border-white" />
-              </div>
+              <hr className="rotate-90 w-14 border-t border-white" />
               <div className="flex flex-col-reverse gap-2 text-white">
                 <p className="font-bold [writing-mode:vertical-rl] rotate-180 tracking-wider">
                   FOLLOW
@@ -247,36 +246,34 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="flex flex-col w-full  gap-4 ">
+            <div className="flex flex-col w-full gap-4 text-center md:text-left">
               <p
-                className="text-app_primary"
+                className="text-app_primary text-sm sm:text-base"
                 data-aos="fade-right"
                 data-aos-delay="0"
               >
                 NATURAL ENVIRONMENT
               </p>
 
-              <h1 className="text-white text-7xl font-bold">
-                <div className="">
-                  <p
-                    className="p-0 m-0"
-                    data-aos="fade-right"
-                    data-aos-delay="400"
-                  >
-                    Be Safe Controls
-                  </p>
-                  <p
-                    className="p-0 m-0"
-                    data-aos="fade-right"
-                    data-aos-delay="800"
-                  >
-                    Environment
-                  </p>
-                </div>
+              <h1 className="text-white text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight">
+                <p
+                  className="p-0 m-0"
+                  data-aos="fade-right"
+                  data-aos-delay="400"
+                >
+                  Be Safe Controls
+                </p>
+                <p
+                  className="p-0 m-0"
+                  data-aos="fade-right"
+                  data-aos-delay="800"
+                >
+                  Environment
+                </p>
               </h1>
 
               <p
-                className="text-white text-lg"
+                className="text-white text-base sm:text-lg max-w-xl mx-auto md:mx-0"
                 data-aos="fade-right"
                 data-aos-delay="1100"
               >
@@ -286,21 +283,17 @@ export default function Home() {
               </p>
 
               <div
-                className="flex items-center gap-4 py-3"
+                className="flex items-center justify-center md:justify-start gap-4 "
                 data-aos="fade-right"
                 data-aos-delay="1400"
               >
                 <Link
                   href="#"
-                  className="shrink-0 relative z-0 w-fit overflow-hidden rounded-full bg-app_primary px-10 py-4 text-white transition-colors duration-500 group"
+                  className="shrink-0 relative z-0 w-fit overflow-hidden rounded-full bg-app_primary px-8 sm:px-10 py-3 sm:py-4 text-white transition-colors duration-500 group"
                 >
-                  <span className="absolute inset-0 z-0 h-full w-full  origin-left scale-x-0 rounded-full border-[1px] border-app_primary bg-black transition-transform duration-500 group-hover:scale-x-100"></span>
-
-                  {/* Apply flexbox to this inner span */}
+                  <span className="absolute inset-0 z-0 h-full w-full origin-left scale-x-0 rounded-full border-[1px] border-app_primary bg-black transition-transform duration-500 group-hover:scale-x-100"></span>
                   <span className="relative z-10 flex items-center gap-2">
-                    {/* <span>Let's Talk</span> */}
                     <p>Let&apos;s talk</p>
-
                     <Image
                       src="/images/button-shape-1.png"
                       alt=""
@@ -311,36 +304,33 @@ export default function Home() {
                 </Link>
 
                 <div className="relative">
-                  {/* Static button */}
                   <div className="bg-[#345250] rounded-full cursor-pointer p-3 hover:bg-[#456260] transition-colors">
                     <div className="w-8 h-8 relative">
                       <Image src="/svgs/video.svg" alt="video button" fill />
                     </div>
                   </div>
-                  {/* Animated ring */}
                   <div className="absolute inset-0 bg-[#345250]/30 rounded-full animate-ping"></div>
                 </div>
 
-                <p className="text-white text-lg">Watch Video</p>
+                <p className="text-white text-base sm:text-lg">Watch Video</p>
               </div>
             </div>
           </div>
 
-          <div className="flex flex-col gap-3 w-full   items-end    ">
+          {/* Right Radio Controls */}
+          <div className="flex flex-col gap-3 items-center md:items-end">
             <input
               id="default-radio-1"
               type="radio"
-              value=""
               name="default-radio"
-              className=" w-4 h-4 cursor-pointer  border-2 border-white/50 rounded-full checked:border-white checked:border-4 hover:border-white/70 transition-all"
+              className="w-4 h-4 cursor-pointer border-2 border-white/50 rounded-full checked:border-white checked:border-4 hover:border-white/70 transition-all"
               onClick={applyFirstBackground}
             />
             <input
               id="default-radio-2"
               type="radio"
-              value=""
               name="default-radio"
-              className="w-4 h-4 cursor-pointer appearance-none border-2 border-white/50 rounded-full checked:border-white checked:border-4 hover:border-white/70 transition-all"
+              className="w-4 h-4 cursor-pointer border-2 border-white/50 rounded-full checked:border-white checked:border-4 hover:border-white/70 transition-all"
               onClick={applySecondBackground}
             />
           </div>
@@ -365,28 +355,37 @@ export default function Home() {
       </section>
 
       <section
-        className="relative w-full bg-cover bg-[#FBF7F1] "
+        className="relative w-full bg-cover bg-[#FBF7F1]"
         style={{
           backgroundImage: `url('/images/team-bg.jpg')`,
           backgroundColor: "#FBF7F1",
           backgroundBlendMode: "multiply",
         }}
       >
-        <div className="mx-auto flex relative gap-20 px-40 py-28 w-full max-w-screen-2xl ">
-          <div className="relative w-full">
-            <Image src="/images/about.png" alt="" height={400} width={600} />
+        <div className="mx-auto flex flex-col lg:flex-row relative gap-5 lg:gap-6 px-4 sm:px-6 md:px-12 lg:px-40 py-14 sm:py-20 lg:py-28 w-full max-w-screen-2xl">
+          {/* Left Image Section */}
+          <div className="relative w-full flex ">
+            <Image
+              src="/images/about.png"
+              alt=""
+              height={400}
+              width={800}
+              className="w-full max-w-md lg:max-w-lg"
+            />
             <div className="absolute bottom-2 animate-[bounce_2s_infinite]">
               <Image
                 src="/images/about-award.png"
                 alt=""
                 height={100}
                 width={300}
+                className="w-[200px] sm:w-[250px] lg:w-[300px]"
               />
             </div>
           </div>
 
-          <div className="flex flex-col gap-6 py-10 w-full  ">
-            <div className="flex gap-2">
+          {/* Right Content Section */}
+          <div className="flex flex-col gap-6 py-6 sm:py-10 w-full">
+            <div className="flex gap-2 items-center">
               <Image
                 src="/images/sub-title-shape.png"
                 alt=""
@@ -395,20 +394,21 @@ export default function Home() {
               />
               <p className="font-medium text-app_primary">ABOUT POLICY</p>
             </div>
-            <h2 className="font-AlbertSans font-semibold text-[22px] leading-8 sm:text-[38px] sm:leading-[48px] md:text-[44px] md:leading-[54px] lg:text-[32px] lg:leading-[42px] xl:text-[40px] xl:leading-[50px] 2xl:text-[46px] 2xl:leading-[56px] text-HeadingColor-0 ">
+
+            <h2 className="font-AlbertSans font-semibold text-[22px] leading-8 sm:text-[32px] sm:leading-[42px] md:text-[38px] md:leading-[48px] lg:text-[40px] lg:leading-[50px] xl:text-[44px] xl:leading-[54px] 2xl:text-[46px] 2xl:leading-[56px] text-HeadingColor-0">
               Environmental Sustainable Forever Green Future
             </h2>
-            <div className="flex gap-3">
+
+            {/* Feature 1 */}
+            <div className="flex gap-3 items-start">
               <Image
                 src="/images/about-icon.png"
                 alt=""
                 width={40}
-                height={10}
-                className="pb-10"
+                height={40}
               />
-
               <div className="flex flex-col gap-2">
-                <h3 className="font-medium text-xl">Economic Benifits</h3>
+                <h3 className="font-medium text-xl">Economic Benefits</h3>
                 <p>
                   Alternative innovation after ethical to network environmental
                   whiteboard transparent growth natural done.
@@ -416,34 +416,33 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="flex gap-3">
+            {/* Feature 2 */}
+            <div className="flex gap-3 items-start">
               <Image
                 src="/images/about-icon2.png"
                 alt=""
                 width={40}
-                height={10}
-                className="pb-10"
+                height={40}
               />
-
               <div className="flex flex-col gap-2">
                 <h3 className="font-medium text-xl">Safe Environment</h3>
                 <p>
                   Alternative innovation after ethical to network environmental
-                  whiteboard transparent growth natural done..
+                  whiteboard transparent growth natural done.
                 </p>
               </div>
             </div>
 
             <hr />
 
-            <div className="flex gap-10 w-fit">
+            {/* Buttons */}
+            <div className="flex flex-col sm:flex-row gap-6 w-fit">
               <Link
                 href="#"
-                className="shrink-0 relative z-0 w-fit overflow-hidden rounded-full bg-app_primary px-10 py-4 text-white transition-colors duration-500 group"
+                className="shrink-0 relative z-0 w-fit overflow-hidden rounded-full bg-app_primary px-8 sm:px-10 py-3 sm:py-4 text-white transition-colors duration-500 group"
               >
-                <span className="absolute inset-0 z-0 h-full w-full  origin-left scale-x-0 rounded-full border-[1px] border-app_primary bg-black transition-transform duration-500 group-hover:scale-x-100"></span>
+                <span className="absolute inset-0 z-0 h-full w-full origin-left scale-x-0 rounded-full border-[1px] border-app_primary bg-black transition-transform duration-500 group-hover:scale-x-100"></span>
 
-                {/* Apply flexbox to this inner span */}
                 <span className="relative z-10 flex items-center gap-2">
                   <span>More About</span>
                   <Image
@@ -455,7 +454,7 @@ export default function Home() {
                 </span>
               </Link>
 
-              <div className="animate-to-and-fro ">
+              <div className="animate-to-and-fro">
                 <Image
                   src="/images/about-shape.png"
                   alt=""
@@ -468,17 +467,20 @@ export default function Home() {
           </div>
         </div>
 
-        <div className=" absolute right-20 top-40  z-20 animate-zoom-pulse">
+        {/* Floating Shape */}
+        <div className="absolute right-6 sm:right-10 lg:right-20 top-20 sm:top-28 lg:top-40 z-20 animate-zoom-pulse">
           <Image
             src="/images/about-shape-1.png"
             alt=""
             height={40}
             width={40}
+            className="w-8 sm:w-10 lg:w-[40px]"
           />
         </div>
       </section>
 
-      <section
+      
+  <section
         className=" w-full bg-cover "
         style={{
           backgroundImage: `url('/images/service-bg.jpg')`,
@@ -570,7 +572,7 @@ export default function Home() {
                     key={index}
                     className="md:basis-1/2 lg:basis-1/3"
                   >
-                    <ServiceCard
+                    <ServiceCard2
                       key={index}
                       image={Cards.image}
                       icon={Cards.icon}
@@ -586,26 +588,41 @@ export default function Home() {
         </div>
       </section>
 
+
+
+
       <section
         className="w-full bg-cover relative overflow-hidden"
         style={{
           backgroundColor: "#F5F8ED",
         }}
       >
-        <div className="mx-auto flex gap-14 justify-between px-40 py-28 w-full max-w-screen-2xl ">
-          <div className="flex flex-col gap-6 py-10 w-full  ">
-            <div className="flex gap-2">
+        <div className="mx-auto flex flex-col lg:flex-row gap-14 justify-between px-6 sm:px-10 md:px-16 lg:px-40 py-16 sm:py-20 lg:py-28 w-full max-w-screen-2xl">
+          {/* Left Column */}
+          <div className="flex flex-col gap-6 py-6 sm:py-10 w-full">
+            <div className="flex gap-2 items-center">
               <Image
                 src="/images/sub-title-shape.png"
                 alt=""
                 width={20}
                 height={10}
               />
-              <p className="font-medium text-app_primary">OUR SKILSS</p>
+              <p className="font-medium text-app_primary">OUR SKILLS</p>
             </div>
-            <h2 className="font-AlbertSans font-semibold text-[22px] leading-8 sm:text-[38px] sm:leading-[48px] md:text-[44px] md:leading-[54px] lg:text-[32px] lg:leading-[42px] xl:text-[40px] xl:leading-[50px] 2xl:text-[46px] 2xl:leading-[56px] text-HeadingColor-0 ">
+
+            <h2
+              className="font-AlbertSans font-semibold
+        text-[22px] leading-8
+        sm:text-[28px] sm:leading-[38px]
+        md:text-[36px] md:leading-[46px]
+        lg:text-[32px] lg:leading-[42px]
+        xl:text-[40px] xl:leading-[50px]
+        2xl:text-[46px] 2xl:leading-[56px]
+        text-HeadingColor-0"
+            >
               Getting A Greener Future Safe Environment
             </h2>
+
             <p className="text-black/50">
               Competently cultivate worldwide e-tailers through
               principle-centered value professionally engineer high-payoff
@@ -613,14 +630,15 @@ export default function Home() {
               cost effective vortals
             </p>
 
-            <div className="flex justify-between gap-2 w-full">
-              <div className="shrink-0 relative z-0 w-fit overflow-hidden bg-white px-10 py-4 transition-colors duration-500 group">
+            {/* Buttons */}
+            <div className="flex flex-col sm:flex-row justify-start gap-4 w-full">
+              {/* Button 1 */}
+              <div className="shrink-0 relative z-0 w-fit overflow-hidden bg-white px-8 py-4 transition-colors duration-500 group">
                 <span className="absolute inset-0 z-0 h-full w-full origin-left scale-x-0 bg-app_primary transition-transform duration-500 group-hover:scale-x-100"></span>
-
                 <span className="relative z-10 flex items-center gap-2 text-black group-hover:text-white">
                   <svg
                     viewBox="0 0 24 24"
-                    className="w-12 h-12"
+                    className="w-10 h-10"
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
@@ -628,24 +646,25 @@ export default function Home() {
                       d="M12 2C6.49 2 2 6.49 2 12C2 17.51 6.49 22 12 22C17.51 22 22 17.51 22 12C22 6.49 17.51 2 12 2Z"
                       fill="#79B900"
                     />
-
                     <path
                       className="transition-colors duration-500 group-hover:fill-app_primary"
                       d="M16.78 9.7L11.11 15.37C10.97 15.51 10.78 15.59 10.58 15.59C10.38 15.59 10.19 15.51 10.05 15.37L7.22 12.54C6.93 12.25 6.93 11.77 7.22 11.48C7.51 11.19 7.99 11.19 8.28 11.48L10.58 13.78L15.72 8.64C16.01 8.35 16.49 8.35 16.78 8.64C17.07 8.93 17.07 9.4 16.78 9.7Z"
                       fill="#ffffff"
                     />
                   </svg>
-                  <span className="text-lg font-medium">Safe Environment</span>
+                  <span className="text-base font-medium">
+                    Safe Environment
+                  </span>
                 </span>
               </div>
 
-              <div className="shrink-0 relative z-0 w-fit overflow-hidden bg-white px-10 py-4 transition-colors duration-500 group">
+              {/* Button 2 */}
+              <div className="shrink-0 relative z-0 w-fit overflow-hidden bg-white px-8 py-4 transition-colors duration-500 group">
                 <span className="absolute inset-0 z-0 h-full w-full origin-left scale-x-0 bg-app_primary transition-transform duration-500 group-hover:scale-x-100"></span>
-
                 <span className="relative z-10 flex items-center gap-2 text-black group-hover:text-white">
                   <svg
                     viewBox="0 0 24 24"
-                    className="w-12 h-12"
+                    className="w-10 h-10"
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
@@ -653,33 +672,32 @@ export default function Home() {
                       d="M12 2C6.49 2 2 6.49 2 12C2 17.51 6.49 22 12 22C17.51 22 22 17.51 22 12C22 6.49 17.51 2 12 2Z"
                       fill="#79B900"
                     />
-                    {/* Tick */}
                     <path
                       className="transition-colors duration-500 group-hover:fill-app_primary"
                       d="M16.78 9.7L11.11 15.37C10.97 15.51 10.78 15.59 10.58 15.59C10.38 15.59 10.19 15.51 10.05 15.37L7.22 12.54C6.93 12.25 6.93 11.77 7.22 11.48C7.51 11.19 7.99 11.19 8.28 11.48L10.58 13.78L15.72 8.64C16.01 8.35 16.49 8.35 16.78 8.64C17.07 8.93 17.07 9.4 16.78 9.7Z"
                       fill="#ffffff"
                     />
                   </svg>
-                  <span className="text-lg font-medium">Dirty Recycling</span>
+                  <span className="text-base font-medium">Dirty Recycling</span>
                 </span>
               </div>
             </div>
 
-            <div className="flex flex-col gap-2">
-              <div className="flex flex-col ">
+            {/* Progress Bars */}
+            <div className="flex flex-col gap-4">
+              <div className="flex flex-col">
                 <p className="font-medium">Recycling</p>
                 <ProgressBar percentage={90} />
               </div>
-
-              {/* Ocean Cleaning */}
-              <div className="flex flex-col ">
+              <div className="flex flex-col">
                 <p className="font-medium">Ocean Cleaning</p>
                 <ProgressBar percentage={80} />
               </div>
             </div>
           </div>
 
-          <div className="relative w-full h-[600px]">
+          {/* Right Column (Image) */}
+          <div className="relative w-full h-[400px] sm:h-[500px] lg:h-[600px]">
             <Image
               src="/images/skill-thumb.png"
               alt="Skills Background"
@@ -687,23 +705,23 @@ export default function Home() {
               className="object-cover relative z-10"
             />
 
-            {/* Floating image 1 - stays on top */}
+            {/* Floating image 1 */}
             <div className="absolute top-2 left-0 animate-[bounce_4s_infinite] z-20">
               <Image
                 src="/images/skill-shape.png"
                 alt=""
-                width={200}
-                height={100}
+                width={160}
+                height={80}
               />
             </div>
 
-            {/* Floating image 2 - goes behind */}
+            {/* Floating image 2 */}
             <div className="absolute bottom-4 right-0 animate-to-and-fro-down z-0">
               <Image
                 src="/images/skill-shape2.png"
                 alt=""
-                width={150}
-                height={100}
+                width={130}
+                height={80}
               />
             </div>
           </div>
@@ -713,8 +731,8 @@ export default function Home() {
           <Image
             src="/images/skill-main-shape.png"
             alt=""
-            width={250}
-            height={100}
+            width={200}
+            height={80}
           />
         </div>
       </section>
@@ -725,7 +743,7 @@ export default function Home() {
           backgroundImage: `url('/images/counter-bg.png')`,
         }}
       >
-        <div className="flex justify-evenly py-28 max-w-screen-2xl   text-center mx-auto">
+        <div className=" flex flex-col md:flex-row md:justify-evenly md:py-28 max-w-screen-2xl   text-center mx-auto">
           <div className="flex flex-col gap-4 text-white">
             <Image
               src="/images/counter-icon.png"
@@ -776,7 +794,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* process section */}
+   
 
       <section
         className=" relative w-full bg-cover "
@@ -905,12 +923,12 @@ export default function Home() {
             </div>
           </div>
 
-          <div className=" flex justify-evenly w-full px-40 pt-10 ">
-            <div className="w-full flex flex-col gap-12  ">
-              <div className="relative w-full">
-                <div className=" w-56 h-56 absolute inset-0 rounded-full border-4 border-dotted border-app_primary animate-spin-slow z-0 items-center"></div>
+          <div className=" flex justify-center text-center w-full px-40 pt-10   ">
+            <div className="w-full flex flex-col gap-12   ">
+              <div className="relative w-full  flex justify-center items-center  ">
+                <div className=" w-48 flex items-center justify-center mx-auto h-48 absolute inset-x-0  rounded-full border-4 border-dotted border-app_primary animate-spin-slow z-0 "></div>
 
-                <div className="relative w-52 h-52 mx-auto my-auto ml-2">
+                <div className="relative w-48   h-48 -translate-y-3 -translate-x-1 ml-2 ">
                   <Image
                     src="/images/process-icon.png"
                     alt="Process Icon"
@@ -920,15 +938,15 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="flex flex-col gap-3 w-full text-center  ">
-                <h2 className="text-2xl font-semibold">Collection Dust</h2>
+              <div className="flex flex-col gap-3 w-full text-center   ">
+                <h2 className="text-2xl font-semibold ">Collection Dust</h2>
                 <p className=" text-gray-600  ">
                   Proactively drive maintainable value next mission-critical
                   infrastructures eggplant new environmental nature
                 </p>
               </div>
             </div>
-             <div className="h-[200px] w-full  text-center justify-center flex ">
+            <div className="h-[200px] w-full  text-center justify-center flex ">
               <div className="shrink-0 relative w-40 h-[30px] items-center my-auto">
                 <Image
                   src="/images/process-arrow.png"
@@ -940,10 +958,10 @@ export default function Home() {
             </div>
 
             <div className="w-full flex flex-col gap-12 items-center ">
-              <div className="relative   flex items-center justify-center text-center  ">
-                <div className=" w-56 h-56 absolute inset-0 rounded-full border-4 border-dotted border-app_primary animate-spin-slow z-0 items-center"></div>
+              <div className="relative w-full  flex justify-center items-center  ">
+                <div className=" w-48 flex items-center justify-center mx-auto h-48 absolute inset-x-0  rounded-full border-4 border-dotted border-app_primary animate-spin-slow z-0 "></div>
 
-                <div className="relative w-52 h-52 mx-auto my-auto ml-2">
+                <div className="relative w-48   h-48 -translate-y-3 -translate-x-1 ml-2 ">
                   <Image
                     src="/images/process-icon2.png"
                     alt="Process Icon"
@@ -972,10 +990,10 @@ export default function Home() {
               </div>
             </div>
             <div className="w-full flex flex-col gap-12 items-center ">
-              <div className="relative   flex items-center justify-center text-center  ">
-                <div className=" w-56 h-56 absolute inset-0 rounded-full border-4 border-dotted border-app_primary animate-spin-slow z-0 items-center"></div>
+              <div className="relative w-full   flex justify-center items-center  ">
+                <div className=" w-48 flex items-center justify-center mx-auto h-48 absolute inset-x-0  rounded-full border-4 border-dotted border-app_primary animate-spin-slow z-0 "></div>
 
-                <div className="relative w-52 h-52 mx-auto my-auto ml-2">
+                <div className="relative w-48   h-48 -translate-y-3 -translate-x-1 ml-2 ">
                   <Image
                     src="/images/process-icon3.png"
                     alt="Process Icon"
@@ -998,58 +1016,54 @@ export default function Home() {
       </section>
 
       {/* ================= TESTIMONIALS SECTION ================= */}
-      <section className="flex w-full relative pb-64 bg-[#F5F8ED] z-10">
-        {/* left shape */}
-        <div className="w-12 h-12 absolute left-40 top-44 animate-zoom-pulse">
-          <Image src="/images/testi-shape-3.png" alt="" fill />
-        </div>
+     
+<section className="flex w-full relative pb-64 bg-[#F5F8ED] z-10">
+  {/* left shape */}
+  <div className="w-12 h-12 absolute left-40 top-44 animate-zoom-pulse">
+    <Image src="/images/testi-shape-3.png" alt="" fill />
+  </div>
 
-        <div
-          className="flex flex-col w-full max-w-screen-2xl mx-auto px-40 "
-          style={{
-            backgroundImage: `url('/images/map.png')`,
-          }}
-        >
-          {/* floating small shapes */}
-          <div className="flex justify-between w-full relative h-[100px] ">
-            <div className="w-10 h-10 absolute left-0  top-20 animate-zoom-pulse-small">
-              <Image src="/images/testi-shape-4.png" alt="" fill />
-            </div>
-            <div className="w-10 h-10 absolute right-0 top-20 animate-zoom-pulse-small">
-              <Image src="/images/testi-shape-2.png" alt="" fill />
-            </div>
-          </div>
+  <div
+    className="flex flex-col w-full max-w-screen-2xl mx-auto px-6 sm:px-10 md:px-16 lg:px-40"
+    style={{
+      backgroundImage: `url('/images/map.png')`,
+    }}
+  >
 
-          {/* section heading */}
-          <div className="w-full flex flex-col gap-3 mt-4  ">
-            <div className="flex gap-2 text-center w-full justify-center">
-              <Image
-                src="/images/sub-title-shape.png"
-                alt=""
-                width={20}
-                height={10}
-              />
-              <p className="font-medium text-app_primary">TESTIMONIALS</p>
-            </div>
+    <div className="flex justify-between w-full relative h-[100px]">
+      <div className="w-10 h-10 absolute left-0 top-20 animate-zoom-pulse-small">
+        <Image src="/images/testi-shape-4.png" alt="" fill />
+      </div>
+      <div className="w-10 h-10 absolute right-0 top-20 animate-zoom-pulse-small">
+        <Image src="/images/testi-shape-2.png" alt="" fill />
+      </div>
+    </div>
 
-            <div className="flex w-full text-center">
-              <h2 className="mx-auto w-[700px] font-AlbertSans font-semibold text-[22px] leading-8 sm:text-[38px] sm:leading-[48px] md:text-[44px] md:leading-[54px] lg:text-[32px] lg:leading-[42px] xl:text-[40px] xl:leading-[50px] 2xl:text-[46px] 2xl:leading-[56px] text-HeadingColor-0">
-                Clients Best Feedback About Echofy Provission
-              </h2>
-            </div>
-          </div>
+    <div className="w-full flex flex-col gap-3 mt-4">
+      <div className="flex gap-2 text-center w-full justify-center">
+        <Image src="/images/sub-title-shape.png" alt="" width={20} height={10} />
+        <p className="font-medium text-app_primary">TESTIMONIALS</p>
+      </div>
 
-          {/* carousel */}
-          <div className="w-full">
-            <DeveloperCarousel developers={developers} />
-          </div>
-        </div>
+      <div className="flex w-full text-center">
+        <h2 className="mx-auto w-[700px] font-AlbertSans font-semibold text-[22px] leading-8 sm:text-[38px] sm:leading-[48px] md:text-[44px] md:leading-[54px] lg:text-[32px] lg:leading-[42px] xl:text-[40px] xl:leading-[50px] 2xl:text-[46px] 2xl:leading-[56px] text-HeadingColor-0">
+          Clients Best Feedback About Echofy Provission
+        </h2>
+      </div>
+    </div>
 
-        {/* right shape */}
-        <div className="w-12 h-12 absolute right-40 top-44 animate-zoom-pulse">
-          <Image src="/images/testi-shape-1.png" alt="" fill />
-        </div>
-      </section>
+    {/* carousel */}
+    <div className="w-full mt-10">
+      <DeveloperCarousel developers={developers} />
+    </div>
+  </div>
+
+  {/* right shape */}
+  <div className="w-12 h-12 absolute right-40 top-44 animate-zoom-pulse">
+    <Image src="/images/testi-shape-1.png" alt="" fill />
+  </div>
+</section>
+
 
       {/* ================= BRAND SECTION ================= */}
       <section className=" rounded-lg w-full flex  h-fit flex-col items-center justify-center mx-auto relative z-40 -mt-[150px]">
@@ -1117,95 +1131,78 @@ export default function Home() {
         </div>
       </section>
 
-      <section
-        className="flex w-full mx-auto  relative z-20 h-fit  pt-48 pb-12 -mt-[150px]   "
-        style={{
-          backgroundImage: `url("/images/team-bg.jpg ")`,
-        }}
+     <section
+  className="flex w-full relative z-20 h-fit pt-48 pb-12 -mt-[150px]"
+  style={{ backgroundImage: `url("/images/team-bg.jpg")` }}
+>
+  <div className="py-20 w-full max-w-screen-2xl px-6 sm:px-10 md:px-16 lg:px-40 mx-auto">
+   
+    <div className="w-full flex flex-col gap-5">
+      <div className="flex gap-2 justify-center w-full text-center">
+        <Image src="/images/sub-title-shape.png" alt="" width={20} height={10} />
+        <p className="font-medium text-app_primary">OUR TEAM</p>
+      </div>
+
+      <div className="flex w-full justify-center text-center">
+        <h2 className="mx-auto w-full max-w-[700px] font-AlbertSans font-semibold text-[22px] leading-8 sm:text-[38px] sm:leading-[48px] md:text-[44px] md:leading-[54px] lg:text-[32px] lg:leading-[42px] xl:text-[40px] xl:leading-[50px] 2xl:text-[46px] 2xl:leading-[56px] text-HeadingColor-0">
+          Meet Our Dedicated Members
+        </h2>
+      </div>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 w-full py-8">
+        {members.map((member, index) => (
+          <MemberCard
+            key={index}
+            image={member.image}
+            name={member.name}
+            position={member.position}
+          />
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section className="mx-auto flex flex-col gap-5 px-6 sm:px-10 md:px-16 lg:px-40 w-full max-w-screen-2xl h-fit py-20">
+  {/* Subtitle */}
+  <div className="flex gap-2">
+    <Image src="/images/sub-title-shape.png" alt="" width={20} height={10} />
+    <p className="font-medium text-app_primary">LATEST BLOG</p>
+  </div>
+
+  {/* Heading + Button */}
+  <div className="flex flex-col lg:flex-row w-full justify-between items-start lg:items-center gap-4">
+    <h2 className="w-full font-AlbertSans font-semibold text-[22px] leading-8 sm:text-[38px] sm:leading-[48px] md:text-[44px] md:leading-[54px] lg:text-[32px] lg:leading-[42px] xl:text-[40px] xl:leading-[50px] 2xl:text-[46px] 2xl:leading-[56px] text-HeadingColor-0">
+      Building a Greener Future Together Forever
+    </h2>
+
+    <div className="flex justify-start lg:justify-end w-full">
+      <Link
+        href="#"
+        className="relative z-0 w-fit overflow-hidden rounded-full bg-app_primary px-10 py-4 text-white transition-colors duration-500 group"
       >
-        <div className=" py-20 w-full max-w-screen-2xl px-40 mx-auto  ">
-          {/* section heading */}
-          <div className="w-full flex flex-col gap-5">
-            <div className="flex gap-2 text-center w-full justify-center">
-              <Image
-                src="/images/sub-title-shape.png"
-                alt=""
-                width={20}
-                height={10}
-              />
-              <p className="font-medium text-app_primary">OUR TEAM</p>
-            </div>
-
-            <div className="flex w-full text-center">
-              <h2 className="mx-auto w-[700px] font-AlbertSans font-semibold text-[22px] leading-8 sm:text-[38px] sm:leading-[48px] md:text-[44px] md:leading-[54px] lg:text-[32px] lg:leading-[42px] xl:text-[40px] xl:leading-[50px] 2xl:text-[46px] 2xl:leading-[56px] text-HeadingColor-0">
-                Meet Our Dedicated Members
-              </h2>
-            </div>
-
-            <div className="flex justify-evenly gap-10 w-full max-w-screen-2xl py-8 ">
-              {members.map((members, index) => (
-                <MemberCard
-                  key={index}
-                  image={members.image}
-                  name={members.name}
-                  position={members.position}
-                />
-              ))}
-            </div>
-          </div>
+        <span className="absolute inset-0 z-0 scale-x-0 origin-left transform bg-black border border-app_primary transition-transform duration-500 group-hover:scale-x-100"></span>
+        <div className="relative z-10 flex items-center gap-2">
+          <span>View All Blog</span>
+          <Image src="/images/button-shape-1.png" alt="" width={13} height={5} />
         </div>
-      </section>
+      </Link>
+    </div>
+  </div>
 
-      <section>
-        <div className="mx-auto flex flex-col gap-5 px-40 w-full max-w-screen-2xl h-fit py-20">
-          {/* Subtitle */}
-          <div className="flex gap-2">
-            <Image
-              src="/images/sub-title-shape.png"
-              alt=""
-              width={20}
-              height={10}
-            />
-            <p className="font-medium text-app_primary">LATEST BLOG</p>
-          </div>
+ 
+  <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 py-10">
+    {WorkTeam.map((team, index) => (
+      <WorkerTeam
+        key={index}
+        image={team.image}
+        title={team.title}
+        supervisor={team.supervisor}
+      />
+    ))}
+  </div>
+</section>
 
-          <div className="flex w-full justify-between items-center">
-            <h2 className="w-full font-AlbertSans font-semibold text-[22px] leading-8 sm:text-[38px] sm:leading-[48px] md:text-[44px] md:leading-[54px] lg:text-[32px] lg:leading-[42px] xl:text-[40px] xl:leading-[50px] 2xl:text-[46px] 2xl:leading-[56px] text-HeadingColor-0 ">
-              Building a Greener Future Together Forever
-            </h2>
-
-            <div className="flex justify-end w-full">
-              <Link
-                href="#"
-                className="relative z-0 w-fit overflow-hidden rounded-full bg-app_primary px-10 py-4 text-white transition-colors duration-500 group"
-              >
-                <span className="absolute inset-0 z-0 scale-x-0 origin-left transform bg-black border border-app_primary transition-transform duration-500 group-hover:scale-x-100"></span>
-
-                <div className="relative z-10 flex items-center gap-2">
-                  <span>View All Blog</span>
-                  <Image
-                    src="/images/button-shape-1.png"
-                    alt=""
-                    width={13}
-                    height={5}
-                  />
-                </div>
-              </Link>
-            </div>
-          </div>
-
-          <div className="w-full flex gap-5 py-10">
-            {WorkTeam.map((team, index) => (
-              <WorkerTeam
-                key={index}
-                image={team.image}
-                title={team.title}
-                supervisor={team.supervisor}
-              />
-            ))}
-          </div>
-        </div>
-      </section>
 
       <Footer />
       <ScrollToTop show={showScrollTop} />
