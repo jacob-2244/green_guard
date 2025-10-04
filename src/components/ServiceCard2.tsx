@@ -9,11 +9,13 @@ type ServiceCardProps = {
 
 export default function ServiceCard2({ image, icon, title }: ServiceCardProps) {
   return (
-    <div className=" bg-white pb-4 group relative flex flex-col w-full  gap-6 m-0 p-0 max-w-sm  rounded-lg overflow-hidden z-10 duration-500 ">
+    <div className=" bg-white pb-4 group relative flex flex-col w-full  gap-6 m-0 p-0 max-w-xl md:max-w-sm  rounded-lg overflow-hidden z-10 duration-500 ">
       <div className="absolute inset-0 h-0 w-full bg-black transition-all duration-500 ease-out group-hover:h-full -z-10"></div>
 
       <div className=" relative w-full z-10 ">
-        <Image src={image} alt="image" width={450} height={50} />
+        <Image src={image} alt="image" width={450} height={50} 
+         className="w-full h-auto object-cover" 
+        />
 
         <div className=" absolute -mt-[40px] z-20 left-6 ">
           <Image src={icon} alt="icon" width={80} height={10} />

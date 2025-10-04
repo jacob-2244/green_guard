@@ -455,29 +455,29 @@ const Footer = () => {
       </div>
 
       {/* Main Footer Columns */}
-      <div className="flex flex-col md:flex-row w-full max-w-screen-2xl gap-10 md:gap-20 px-6 md:px-40 py-20 mx-auto">
+      <div className="flex flex-col lg:flex-row w-full max-w-screen-2xl gap-10 md:gap-20 px-6 md:px-40 py-20 mx-auto">
         {/* Column 1 */}
-        <div className="flex flex-col w-full gap-4 text-white text-center md:text-left">
-          <div className="flex justify-center md:justify-start items-center">
+        <div className="flex flex-col w-full gap-4 text-white  md:text-left">
+          <div className="flex  justify-start ">
             <Image src="/images/logo.png" alt="logo" width={160} height={50} />
           </div>
           <p className="text-base md:text-lg">
             Proactively restore timely alignments after client environmentals
           </p>
 
-          <div className="w-full flex gap-2 items-center justify-center md:justify-start">
+          <div className="w-full flex gap-2 justify-start">
             <hr className="border border-t-app_primary w-6" />
             <p className="text-base md:text-lg">Contact</p>
           </div>
 
-          <div className="flex gap-2 items-center justify-center md:justify-start">
+          <div className="flex gap-2 items-center justify-start">
             <Image src="/svgs/call.svg" alt="" width={20} height={15} />
             <a className="text-base md:text-lg" href="">
               +923487997462
             </a>
           </div>
 
-          <div className="flex gap-2 justify-center md:justify-start">
+          <div className="flex gap-2 justify-start">
             <Image src="/svgs/email.svg" alt="" width={28} height={20} />
             <a className="text-base md:text-lg" href="#">
               muhammadyaqoob2580@gmail.com
@@ -486,7 +486,7 @@ const Footer = () => {
         </div>
 
         {/* Column 2 */}
-        <div className="flex flex-col gap-4 w-full text-center md:text-left">
+        <div className="flex flex-col gap-4 w-full text-left">
           <h2 className="text-white text-2xl md:text-3xl font-bold">Company</h2>
           <div className="flex flex-col gap-6 w-full">
             <Link className="text-base md:text-lg leading-none text-gray-400 hover:text-app_primary" href={Home}>Home</Link>
@@ -496,7 +496,7 @@ const Footer = () => {
         </div>
 
         {/* Column 3 */}
-        <div className="flex flex-col gap-4 w-full text-center md:text-left">
+        <div className="flex flex-col gap-4 w-full text-left">
           <h2 className="text-white text-2xl md:text-3xl font-bold">Quick Links</h2>
           <div className="flex flex-col gap-6 w-full">
             <p className="text-base md:text-lg text-gray-400 hover:text-app_primary cursor-pointer">Testimonials</p>
@@ -506,7 +506,7 @@ const Footer = () => {
         </div>
 
         {/* Column 4 */}
-        <div className="flex flex-col gap-6 w-full text-center md:text-left">
+        <div className="flex flex-col gap-6 w-full text-left">
           <h2 className="text-white text-2xl md:text-3xl font-bold">News Letter</h2>
           <p className="text-gray-400 text-base md:text-lg">Subscribe Our Newsletter</p>
 
@@ -518,7 +518,7 @@ const Footer = () => {
           <input
             type="submit"
             value="SUBSCRIBE ->"
-            className="bg-app_primary text-white text-lg md:text-xl rounded-full w-full p-3 md:p-4 cursor-pointer hover:bg-[#062216]"
+            className="bg-app_primary text-white text-lg md:text-xl rounded-full w-full md:w-full px-12 py-3 md:p-4 cursor-pointer hover:bg-[#062216]"
           />
         </div>
       </div>

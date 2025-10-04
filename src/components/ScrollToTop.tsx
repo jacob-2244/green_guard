@@ -14,7 +14,7 @@ const ScrollToTop = ({ show }: Props) => {
   return (
     <button
       onClick={handleClick}
-      className="fixed bottom-8 right-8 flex  h-12 w-12 items-center justify-center rounded-full bg-app_primary text-white shadow-lg transition-all hover:bg-white hover:text-app_primary animate-bounce duration-1000"
+      className="z-40 fixed bottom-8 right-8 flex  h-12 w-12 items-center justify-center rounded-full bg-app_primary text-white shadow-lg transition-all hover:bg-white hover:text-app_primary animate-bounce duration-1000"
     >
       <svg
         className="h-6 w-6 rotate-90" 
