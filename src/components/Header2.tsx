@@ -209,7 +209,7 @@ export default function Header2() {
       {/* Top Bar */}
       <div className="flex justify-between w-full items-center text-white py-4 mx-auto px-4 sm:px-6 lg:px-40 max-w-screen-2xl">
         <div className="flex gap-6 sm:gap-10">
-          <div className="flex gap-1">
+          <div className=" hidden xs:flex  gap-1">
             <Image src="/svgs/location.svg" alt="" width={20} height={20} />
             <p className="text-[14px] leading-[21px]">
               102/B New Market,Sandigo-USA
@@ -220,8 +220,8 @@ export default function Header2() {
             <a href="#">example@gmail.com</a>
           </div>
         </div>
-        <div className="hidden sm:flex gap-10">
-          <div className="flex gap-1 items-center">
+        <div className="flex gap-10">
+          <div className=" hidden md:flex gap-1 items-center">
             <Image src="/svgs/call.svg" alt="" width={15} height={15} />
             <a href="">+123 (4567) 890</a>
           </div>
@@ -235,9 +235,9 @@ export default function Header2() {
       </div>
 
       <hr className="border-t border-gray-200 opacity-15" />
+{/* 
+     Main header */}
 
-      {/* Main Header */}
-      {/* Main Header */}
 <div
   className={`w-full ${isFixed ? "fixed top-0 left-0 right-0 z-50" : ""}`}
   data-aos={triggerFade ? "fade-down" : ""}
@@ -252,18 +252,20 @@ export default function Header2() {
     <div className="max-w-screen-2xl px-4 sm:px-6 md:px-12 lg:px-40 mx-auto">
       <div className="flex justify-between items-center text-white py-4 sm:py-6">
         {/* Logo */}
-        <div className="flex items-center">
+        <div className="flex items-center ">
           <Image
             src="/images/logo.png"
             alt="logo"
             width={160}
             height={50}
+            className="max-w-full h-auto"
           />
         </div>
 
+
         {/* Desktop Nav */}
         <div className="hidden lg:flex items-center space-x-8">
-          <div className="flex space-x-8 text-white">
+          <div className="flex   space-x-6 text-white">
             <Link href={Home}>Home</Link>
             <Link href={About}>About</Link>
             <Link href={Service}>Service</Link>

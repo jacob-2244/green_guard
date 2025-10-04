@@ -82,15 +82,22 @@ const ServiceCards = [
 
 const developers = [
   {
+    image: "/images/testi-profile2.png",
+    name: "John D. Alexon",
+    position: "UI/UX Designer",
+  },
+
+  {
     image: "/images/testi-profile.png",
     name: "Angelina Watson",
     position: "Web Developer",
   },
   {
-    image: "/images/testi-profile2.png",
-    name: "John D. Alexon",
-    position: "UI/UX Designer",
+    image: "/images/testi-profile.png",
+    name: "Angelina Watson",
+    position: "Web Developer",
   },
+
   {
     image: "/images/testi-profile.png",
     name: "Angelina Watson",
@@ -195,16 +202,18 @@ export default function Home() {
 
   return (
     <>
+      {/* Hero section */}
+
       <section
-        className="flex flex-col relative  h-fit 2xl:min-h-screen w-full bg-cover bg-center bg-no-repeat"
+        className="flex flex-col relative h-fit 2xl:min-h-screen w-full bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url('${currentBackground}')` }}
       >
         <Header2 />
 
-        <div className=" py-40 2xl:py-0 flex justify-between items-center gap-10 w-full mx-auto my-auto px-4 sm:px-6 lg:px-20">
-          <div className="flex flex-col md:flex-row  md:gap-10 w-full ">
+        <div className="py-20 sm:py-28 xl:py-0 flex flex-col xl:flex-row justify-between items-center gap-10 w-full mx-auto my-auto px-4 sm:px-6 lg:px-80">
+          <div className="flex flex-row w-full">
             <div
-              className=" hidden md:flex flex-col items-center gap-10 opacity-90 p-6"
+              className="hidden md:flex flex-col items-center gap-10 opacity-90 p-6"
               data-aos="fade-up"
               data-aos-delay="1500"
             >
@@ -245,7 +254,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="flex flex-col w-full gap-4 text-center md:text-left">
+            <div className="flex flex-col w-full gap-7  md:text-left">
               <p
                 className="text-app_primary text-sm sm:text-base"
                 data-aos="fade-right"
@@ -254,7 +263,7 @@ export default function Home() {
                 NATURAL ENVIRONMENT
               </p>
 
-              <h1 className="text-white text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight">
+              <h1 className="text-white text-3xl sm:text-5xl lg:text-7xl font-bold leading-tight">
                 <p
                   className="p-0 m-0"
                   data-aos="fade-right"
@@ -272,7 +281,7 @@ export default function Home() {
               </h1>
 
               <p
-                className="text-white text-base sm:text-lg max-w-xl mx-auto md:mx-0"
+                className="text-white text-base sm:text-lg max-w-xl  md:mx-0"
                 data-aos="fade-right"
                 data-aos-delay="1100"
               >
@@ -282,7 +291,7 @@ export default function Home() {
               </p>
 
               <div
-                className="flex items-center justify-center md:justify-start gap-4 "
+                className="flex items-center justify-center md:justify-start gap-4"
                 data-aos="fade-right"
                 data-aos-delay="1400"
               >
@@ -314,30 +323,30 @@ export default function Home() {
                 <p className="text-white text-base sm:text-lg">Watch Video</p>
               </div>
             </div>
-          </div>
 
-          {/* Right Radio Controls */}
-          <div className="flex flex-col gap-3 items-center md:items-end">
-            <input
-              id="default-radio-1"
-              type="radio"
-              name="default-radio"
-              className="w-4 h-4 cursor-pointer border-2 border-white/50 rounded-full checked:border-white checked:border-4 hover:border-white/70 transition-all"
-              onClick={applyFirstBackground}
-            />
-            <input
-              id="default-radio-2"
-              type="radio"
-              name="default-radio"
-              className="w-4 h-4 cursor-pointer border-2 border-white/50 rounded-full checked:border-white checked:border-4 hover:border-white/70 transition-all"
-              onClick={applySecondBackground}
-            />
+            <div className="flex flex-col gap-3 items-center justify-center my-auto ml-6">
+              <input
+                id="default-radio-1"
+                type="radio"
+                name="default-radio"
+                className="w-4 h-4 cursor-pointer border-2 border-white/50 rounded-full checked:border-white checked:border-4 hover:border-white/70 transition-all"
+                onClick={applyFirstBackground}
+              />
+              <input
+                id="default-radio-2"
+                type="radio"
+                name="default-radio"
+                className="w-4 h-4 cursor-pointer border-2 border-white/50 rounded-full checked:border-white checked:border-4 hover:border-white/70 transition-all"
+                onClick={applySecondBackground}
+              />
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Marquee section */}
-      <section className="bg-app_primary flex py-6 w-full inset-x-0 -bottom-10 justify-center z-20">
+      {/* Marquee */}
+
+      <section className="bg-app_primary flex py-6 w-full inset-x-0 -bottom-10 justify-center z-20 ">
         <Marquee autoFill={true}>
           <p className="text-2xl text-white font-bold mr-12">
             Animal-Protection
@@ -353,6 +362,8 @@ export default function Home() {
         </Marquee>
       </section>
 
+      {/* Policy */}
+
       <section
         className="relative w-full bg-cover bg-[#FBF7F1]"
         style={{
@@ -362,7 +373,6 @@ export default function Home() {
         }}
       >
         <div className="mx-auto flex flex-col lg:flex-row relative gap-5 lg:gap-6 px-4 sm:px-6 md:px-12 lg:px-40 py-14 sm:py-20 lg:py-28 w-full max-w-screen-2xl">
-          {/* Left Image Section */}
           <div className="relative w-full flex ">
             <Image
               src="/images/about.png"
@@ -382,7 +392,6 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Right Content Section */}
           <div className="flex flex-col gap-6 py-6 sm:py-10 w-full">
             <div className="flex gap-2 items-center">
               <Image
@@ -398,7 +407,6 @@ export default function Home() {
               Environmental Sustainable Forever Green Future
             </h2>
 
-            {/* Feature 1 */}
             <div className="flex gap-3 items-start">
               <Image
                 src="/images/about-icon.png"
@@ -415,7 +423,6 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Feature 2 */}
             <div className="flex gap-3 items-start">
               <Image
                 src="/images/about-icon2.png"
@@ -434,7 +441,6 @@ export default function Home() {
 
             <hr />
 
-            {/* Buttons */}
             <div className="flex flex-col sm:flex-row gap-6 w-fit">
               <Link
                 href="#"
@@ -466,7 +472,6 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Floating Shape */}
         <div className="absolute right-6 sm:right-10 lg:right-20 top-20 sm:top-28 lg:top-40 z-20 animate-zoom-pulse">
           <Image
             src="/images/about-shape-1.png"
@@ -478,13 +483,15 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Service section */}
+
       <section
         className="w-full bg-cover"
         style={{
           backgroundImage: `url('/images/service-bg.jpg')`,
         }}
       >
-        <div className="mx-auto flex flex-col gap-5 px-40 py-28 w-full max-w-screen-2xl">
+        <div className="mx-auto flex flex-col gap-5 w-full max-w-screen-2xl lg:gap-6 px-4 sm:px-6 md:px-12 lg:px-40  py-10 sm:py-20 lg:py-28 relative">
           <div className="flex gap-2">
             <Image
               src="/images/sub-title-shape.png"
@@ -495,12 +502,12 @@ export default function Home() {
             <p className="font-medium text-app_primary">OUR SERVICES</p>
           </div>
 
-          <div className="flex w-full justify-between">
+          <div className="flex flex-col gap-6 md:flex-row w-full justify-between">
             <h2 className="w-full font-AlbertSans font-semibold text-[22px] leading-8 sm:text-[38px] sm:leading-[48px] md:text-[44px] md:leading-[54px] lg:text-[32px] lg:leading-[42px] xl:text-[40px] xl:leading-[50px] 2xl:text-[46px] 2xl:leading-[56px] text-HeadingColor-0">
               Echofy Provide Environment Best Leading Services
             </h2>
 
-            <div className="flex gap-4 justify-end w-full">
+            <div className="flex gap-4 justify-start md:justify-end w-full">
               <div className="group flex h-12 w-12 items-center justify-center rounded-full bg-app_primary text-white transition-colors duration-300 hover:bg-gray-200 hover:text-app_primary hover:cursor-pointer">
                 <div className="relative h-6 w-6">
                   <svg
@@ -508,20 +515,12 @@ export default function Home() {
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                   >
-                    <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-                    <g
-                      id="SVGRepo_tracerCarrier"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    ></g>
-                    <g id="SVGRepo_iconCarrier">
-                      <path
-                        fillRule="evenodd"
-                        clipRule="evenodd"
-                        d="M11.7071 4.29289C12.0976 4.68342 12.0976 5.31658 11.7071 5.70711L6.41421 11H20C20.5523 11 21 11.4477 21 12C21 12.5523 20.5523 13 20 13H6.41421L11.7071 18.2929C12.0976 18.6834 12.0976 19.3166 11.7071 19.7071C11.3166 20.0976 10.6834 20.0976 10.2929 19.7071L3.29289 12.7071C3.10536 12.5196 3 12.2652 3 12C3 11.7348 3.10536 11.4804 3.29289 11.2929L10.2929 4.29289C10.6834 3.90237 11.3166 3.90237 11.7071 4.29289Z"
-                        fill="currentColor"
-                      ></path>
-                    </g>
+                    <path
+                      fillRule="evenodd"
+                      clipRule="evenodd"
+                      d="M11.7071 4.29289C12.0976 4.68342 12.0976 5.31658 11.7071 5.70711L6.41421 11H20C20.5523 11 21 11.4477 21 12C21 12.5523 20.5523 13 20 13H6.41421L11.7071 18.2929C12.0976 18.6834 12.0976 19.3166 11.7071 19.7071C11.3166 20.0976 10.6834 20.0976 10.2929 19.7071L3.29289 12.7071C3.10536 12.5196 3 12.2652 3 12C3 11.7348 3.10536 11.4804 3.29289 11.2929L10.2929 4.29289C10.6834 3.90237 11.3166 3.90237 11.7071 4.29289Z"
+                      fill="currentColor"
+                    ></path>
                   </svg>
                 </div>
               </div>
@@ -533,20 +532,12 @@ export default function Home() {
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                   >
-                    <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-                    <g
-                      id="SVGRepo_tracerCarrier"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    ></g>
-                    <g id="SVGRepo_iconCarrier">
-                      <path
-                        fillRule="evenodd"
-                        clipRule="evenodd"
-                        d="M12.2929 4.29289C12.6834 3.90237 13.3166 3.90237 13.7071 4.29289L20.7071 11.2929C21.0976 11.6834 21.0976 12.3166 20.7071 12.7071L13.7071 19.7071C13.3166 20.0976 12.6834 20.0976 12.2929 19.7071C11.9024 19.3166 11.9024 18.6834 12.2929 18.2929L17.5858 13H4C3.44772 13 3 12.5523 3 12C3 11.4477 3.44772 11 4 11H17.5858L12.2929 5.70711C11.9024 5.31658 11.9024 4.68342 12.2929 4.29289Z"
-                        fill="currentColor"
-                      ></path>
-                    </g>
+                    <path
+                      fillRule="evenodd"
+                      clipRule="evenodd"
+                      d="M12.2929 4.29289C12.6834 3.90237 13.3166 3.90237 13.7071 4.29289L20.7071 11.2929C21.0976 11.6834 21.0976 12.3166 20.7071 12.7071L13.7071 19.7071C13.3166 20.0976 12.6834 20.0976 12.2929 19.7071C11.9024 19.3166 11.9024 18.6834 12.2929 18.2929L17.5858 13H4C3.44772 13 3 12.5523 3 12C3 11.4477 3.44772 11 4 11H17.5858L12.2929 5.70711C11.9024 5.31658 11.9024 4.68342 12.2929 4.29289Z"
+                      fill="currentColor"
+                    ></path>
                   </svg>
                 </div>
               </div>
@@ -567,12 +558,7 @@ export default function Home() {
                 {ServiceCards.map((Cards, index) => (
                   <CarouselItem
                     key={index}
-                    className="
-                w-full 
-                sm:basis-1/1    
-                md:basis-1/2    
-                lg:basis-1/3   
-              "
+                    className="w-full sm:basis-1/1 md:basis-1/2 lg:basis-1/3"
                   >
                     <ServiceCard
                       key={index}
@@ -583,12 +569,15 @@ export default function Home() {
                   </CarouselItem>
                 ))}
               </CarouselContent>
-              <CarouselPrevious />
-              <CarouselNext />
+
+              <CarouselPrevious className="flex absolute left-0 top-1/2 -translate-y-1/2 bg-app_primary text-white p-3 rounded-full shadow-md hover:bg-app_primary/80" />
+              <CarouselNext className="flex absolute right-0 top-1/2 -translate-y-1/2 bg-app_primary text-white p-3 rounded-full shadow-md hover:bg-app_primary/80" />
             </Carousel>
           </div>
         </div>
       </section>
+
+      {/* skills */}
 
       <section
         className="w-full bg-cover relative overflow-hidden"
@@ -597,7 +586,6 @@ export default function Home() {
         }}
       >
         <div className="mx-auto flex flex-col lg:flex-row gap-14 justify-between px-6 sm:px-10 md:px-16 lg:px-40 py-16 sm:py-20 lg:py-28 w-full max-w-screen-2xl">
-          {/* Left Column */}
           <div className="flex flex-col gap-6 py-6 sm:py-10 w-full">
             <div className="flex gap-2 items-center">
               <Image
@@ -629,9 +617,7 @@ export default function Home() {
               cost effective vortals
             </p>
 
-            {/* Buttons */}
             <div className="flex flex-col sm:flex-row justify-start gap-4 w-full">
-              {/* Button 1 */}
               <div className="shrink-0 relative z-0 w-fit overflow-hidden bg-white px-8 py-4 transition-colors duration-500 group">
                 <span className="absolute inset-0 z-0 h-full w-full origin-left scale-x-0 bg-app_primary transition-transform duration-500 group-hover:scale-x-100"></span>
                 <span className="relative z-10 flex items-center gap-2 text-black group-hover:text-white">
@@ -657,7 +643,6 @@ export default function Home() {
                 </span>
               </div>
 
-              {/* Button 2 */}
               <div className="shrink-0 relative z-0 w-fit overflow-hidden bg-white px-8 py-4 transition-colors duration-500 group">
                 <span className="absolute inset-0 z-0 h-full w-full origin-left scale-x-0 bg-app_primary transition-transform duration-500 group-hover:scale-x-100"></span>
                 <span className="relative z-10 flex items-center gap-2 text-black group-hover:text-white">
@@ -682,7 +667,6 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Progress Bars */}
             <div className="flex flex-col gap-4">
               <div className="flex flex-col">
                 <p className="font-medium">Recycling</p>
@@ -695,7 +679,6 @@ export default function Home() {
             </div>
           </div>
 
-    
           <div className="relative w-full h-[400px] sm:h-[500px] lg:h-[600px]">
             <Image
               src="/images/skill-thumb.png"
@@ -734,14 +717,14 @@ export default function Home() {
         </div>
       </section>
 
+      {/* brands */}
       <section
         className="w-full "
         style={{
           backgroundImage: `url('/images/counter-bg.png')`,
         }}
       >
-
-        <div className=" flex flex-col md:flex-row md:justify-evenly md:py-28 max-w-screen-2xl   text-center mx-auto">
+        <div className=" flex flex-col gap-10 md:flex-row md:justify-evenly py-10 md:py-28 max-w-screen-2xl items-center  text-center mx-auto">
           <div className="flex flex-col gap-4 text-white">
             <Image
               src="/images/counter-icon.png"
@@ -792,14 +775,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section
-        className=" relative w-full bg-cover "
-        // style={{
-        //     backgroundImage: `url('/images/team-bg.jpg')`,
-
-        // }}
-      >
-        <div className="mx-auto flex flex-col  gap-5 px-40 py-28 w-full max-w-screen-2xl ">
+      {/* Projects Section */}
+      <section className="w-full bg-cover">
+        <div className="mx-auto flex flex-col gap-5 w-full max-w-screen-2xl lg:gap-6 px-4 sm:px-6 md:px-12 lg:px-40 py-10 sm:py-20 lg:py-28 relative">
+          {/* Subtitle */}
           <div className="flex gap-2">
             <Image
               src="/images/sub-title-shape.png"
@@ -810,12 +789,13 @@ export default function Home() {
             <p className="font-medium text-app_primary">OUR PROJECTS</p>
           </div>
 
-          <div className=" flex w-full justify-between">
-            <h2 className="w-full font-AlbertSans font-semibold text-[22px] leading-8 sm:text-[38px] sm:leading-[48px] md:text-[44px] md:leading-[54px] lg:text-[32px] lg:leading-[42px] xl:text-[40px] xl:leading-[50px] 2xl:text-[46px] 2xl:leading-[56px] text-HeadingColor-0 ">
-              Finished the Latest Leading Environmental Works{" "}
+          {/* Heading + Arrows */}
+          <div className="flex flex-col gap-6 md:flex-row w-full justify-between">
+            <h2 className="w-full font-AlbertSans font-semibold text-[22px] leading-8 sm:text-[28px] sm:leading-[38px] md:text-[36px] md:leading-[46px] lg:text-[32px] lg:leading-[42px] xl:text-[40px] xl:leading-[50px] 2xl:text-[46px] 2xl:leading-[56px] text-HeadingColor-0">
+              Finished the Latest Leading Environmental Works
             </h2>
 
-            <div className="flex gap-4 justify-end w-full">
+            <div className="flex gap-4 justify-start md:justify-end w-full">
               {/* Left Arrow */}
               <div className="group flex h-12 w-12 items-center justify-center rounded-full bg-app_primary text-white transition-colors duration-300 hover:bg-gray-200 hover:text-app_primary hover:cursor-pointer">
                 <div className="relative h-6 w-6">
@@ -824,20 +804,12 @@ export default function Home() {
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                   >
-                    <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-                    <g
-                      id="SVGRepo_tracerCarrier"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    ></g>
-                    <g id="SVGRepo_iconCarrier">
-                      <path
-                        fillRule="evenodd"
-                        clipRule="evenodd"
-                        d="M11.7071 4.29289C12.0976 4.68342 12.0976 5.31658 11.7071 5.70711L6.41421 11H20C20.5523 11 21 11.4477 21 12C21 12.5523 20.5523 13 20 13H6.41421L11.7071 18.2929C12.0976 18.6834 12.0976 19.3166 11.7071 19.7071C11.3166 20.0976 10.6834 20.0976 10.2929 19.7071L3.29289 12.7071C3.10536 12.5196 3 12.2652 3 12C3 11.7348 3.10536 11.4804 3.29289 11.2929L10.2929 4.29289C10.6834 3.90237 11.3166 3.90237 11.7071 4.29289Z"
-                        fill="currentColor"
-                      ></path>
-                    </g>
+                    <path
+                      fillRule="evenodd"
+                      clipRule="evenodd"
+                      d="M11.7071 4.29289C12.0976 4.68342 12.0976 5.31658 11.7071 5.70711L6.41421 11H20C20.5523 11 21 11.4477 21 12C21 12.5523 20.5523 13 20 13H6.41421L11.7071 18.2929C12.0976 18.6834 12.0976 19.3166 11.7071 19.7071C11.3166 20.0976 10.6834 20.0976 10.2929 19.7071L3.29289 12.7071C3.10536 12.5196 3 12.2652 3 12C3 11.7348 3.10536 11.4804 3.29289 11.2929L10.2929 4.29289C10.6834 3.90237 11.3166 3.90237 11.7071 4.29289Z"
+                      fill="currentColor"
+                    ></path>
                   </svg>
                 </div>
               </div>
@@ -850,39 +822,34 @@ export default function Home() {
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                   >
-                    <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-                    <g
-                      id="SVGRepo_tracerCarrier"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    ></g>
-                    <g id="SVGRepo_iconCarrier">
-                      <path
-                        fillRule="evenodd"
-                        clipRule="evenodd"
-                        d="M12.2929 4.29289C12.6834 3.90237 13.3166 3.90237 13.7071 4.29289L20.7071 11.2929C21.0976 11.6834 21.0976 12.3166 20.7071 12.7071L13.7071 19.7071C13.3166 20.0976 12.6834 20.0976 12.2929 19.7071C11.9024 19.3166 11.9024 18.6834 12.2929 18.2929L17.5858 13H4C3.44772 13 3 12.5523 3 12C3 11.4477 3.44772 11 4 11H17.5858L12.2929 5.70711C11.9024 5.31658 11.9024 4.68342 12.2929 4.29289Z"
-                        fill="currentColor"
-                      ></path>
-                    </g>
+                    <path
+                      fillRule="evenodd"
+                      clipRule="evenodd"
+                      d="M12.2929 4.29289C12.6834 3.90237 13.3166 3.90237 13.7071 4.29289L20.7071 11.2929C21.0976 11.6834 21.0976 12.3166 20.7071 12.7071L13.7071 19.7071C13.3166 20.0976 12.6834 20.0976 12.2929 19.7071C11.9024 19.3166 11.9024 18.6834 12.2929 18.2929L17.5858 13H4C3.44772 13 3 12.5523 3 12C3 11.4477 3.44772 11 4 11H17.5858L12.2929 5.70711C11.9024 5.31658 11.9024 4.68342 12.2929 4.29289Z"
+                      fill="currentColor"
+                    ></path>
                   </svg>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="w-full  ">
+          <hr />
+
+          {/* Carousel */}
+          <div className="w-full">
             <Carousel
               opts={{
                 align: "start",
                 loop: true,
               }}
-              className="w-full  justify-center"
+              className="w-full justify-center"
             >
               <CarouselContent>
                 {ProcessCards.map((Cards, index) => (
                   <CarouselItem
                     key={index}
-                    className="md:basis-1/2 lg:basis-1/3"
+                    className="w-full sm:basis-1/1 md:basis-1/2 lg:basis-1/3"
                   >
                     <ProcessCard
                       key={index}
@@ -894,14 +861,36 @@ export default function Home() {
                   </CarouselItem>
                 ))}
               </CarouselContent>
-              <CarouselPrevious />
-              <CarouselNext />
+
+              <CarouselPrevious className="flex absolute left-0 top-1/2 -translate-y-1/2 bg-app_primary text-white p-3 rounded-full shadow-md hover:bg-app_primary/80" />
+              <CarouselNext className="flex absolute right-0 top-1/2 -translate-y-1/2 bg-app_primary text-white p-3 rounded-full shadow-md hover:bg-app_primary/80" />
             </Carousel>
           </div>
         </div>
+      </section>
 
-        {/* <div className="flex flex-col  gap-8  items-center pb-28 w-full max-w-screen-2xl  mx-auto">
-          <div className="flex flex-col gap-3">
+      {/* ================= TESTIMONIALS SECTION ================= */}
+      <section className="flex w-full relative pb-64 bg-[#F5F8ED] ">
+        <div className="hidden md:block w-12 h-12 absolute left-40 top-44 animate-zoom-pulse">
+          <Image src="/images/testi-shape-3.png" alt="" fill />
+        </div>
+
+        <div
+          className="flex flex-col w-full max-w-screen-2xl mx-auto px-6 sm:px-10 md:px-20 lg:px-40"
+          style={{
+            backgroundImage: `url('/images/map.png')`,
+          }}
+        >
+          <div className="hidden md:flex justify-between w-full relative h-[100px]">
+            <div className="w-10 h-10 absolute left-0 top-20 animate-zoom-pulse-small">
+              <Image src="/images/testi-shape-4.png" alt="" fill />
+            </div>
+            <div className="w-10 h-10 absolute right-0 top-20 animate-zoom-pulse-small">
+              <Image src="/images/testi-shape-2.png" alt="" fill />
+            </div>
+          </div>
+
+          <div className="w-full flex flex-col gap-3 mt-4">
             <div className="flex gap-2 text-center w-full justify-center">
               <Image
                 src="/images/sub-title-shape.png"
@@ -909,348 +898,29 @@ export default function Home() {
                 width={20}
                 height={10}
               />
-              <p className="font-medium text-app_primary">WORKING PROCESS</p>
+              <p className="font-medium text-app_primary">TESTIMONIALS</p>
             </div>
 
             <div className="flex w-full text-center">
-              <h2 className="w-full font-AlbertSans font-semibold text-[22px] leading-8 sm:text-[38px] sm:leading-[48px] md:text-[44px] md:leading-[54px] lg:text-[32px] lg:leading-[42px] xl:text-[40px] xl:leading-[50px] 2xl:text-[46px] 2xl:leading-[56px] text-HeadingColor-0 ">
-                Process To Safe Environment
+              <h2 className="mx-auto w-full sm:w-[700px] font-AlbertSans font-semibold text-[22px] leading-8 sm:text-[38px] sm:leading-[48px] md:text-[44px] md:leading-[54px] lg:text-[32px] lg:leading-[42px] xl:text-[40px] xl:leading-[50px] 2xl:text-[46px] 2xl:leading-[56px] text-HeadingColor-0">
+                Clients Best Feedback About Echofy Provission
               </h2>
             </div>
           </div>
 
-          <div className=" flex justify-center text-center w-full px-40 pt-10   ">
-            <div className="w-full flex flex-col gap-12   ">
-              <div className="relative w-full  flex justify-center items-center  ">
-                <div className=" w-48 flex items-center justify-center mx-auto h-48 absolute inset-x-0  rounded-full border-4 border-dotted border-app_primary animate-spin-slow z-0 "></div>
-
-                <div className="relative w-48   h-48 -translate-y-3 -translate-x-1 ml-2 ">
-                  <Image
-                    src="/images/process-icon.png"
-                    alt="Process Icon"
-                    fill
-                    className="object-contain relative z-10"
-                  />
-                </div>
-              </div>
-
-              <div className="flex flex-col gap-3 w-full text-center   ">
-                <h2 className="text-2xl font-semibold ">Collection Dust</h2>
-                <p className=" text-gray-600  ">
-                  Proactively drive maintainable value next mission-critical
-                  infrastructures eggplant new environmental nature
-                </p>
-              </div>
-            </div>
-            <div className="h-[200px] w-full  text-center justify-center flex ">
-              <div className="shrink-0 relative w-40 h-[30px] items-center my-auto">
-                <Image
-                  src="/images/process-arrow.png"
-                  alt=""
-                  fill
-                  className="relative"
-                />
-              </div>
-            </div>
-
-            <div className="w-full flex flex-col gap-12 items-center ">
-              <div className="relative w-full  flex justify-center items-center  ">
-                <div className=" w-48 flex items-center justify-center mx-auto h-48 absolute inset-x-0  rounded-full border-4 border-dotted border-app_primary animate-spin-slow z-0 "></div>
-
-                <div className="relative w-48   h-48 -translate-y-3 -translate-x-1 ml-2 ">
-                  <Image
-                    src="/images/process-icon2.png"
-                    alt="Process Icon"
-                    fill
-                    className="object-contain relative z-10"
-                  />
-                </div>
-              </div>
-
-              <div className="flex flex-col gap-3 w-full text-center">
-                <h2 className="text-2xl font-semibold">Dust Recycling</h2>
-                <p className="text-md text-gray-600  ">
-                  Proactively drive maintainable value next mission-critical
-                  infrastructures eggplant new environmental nature
-                </p>
-              </div>
-            </div>
-            <div className="h-[200px] w-full  text-center justify-center flex ">
-              <div className="shrink-0 relative w-40 h-[30px] items-center my-auto">
-                <Image
-                  src="/images/process-arrow2.png"
-                  alt=""
-                  fill
-                  className="relative"
-                />
-              </div>
-            </div>
-            <div className="w-full flex flex-col gap-12 items-center ">
-              <div className="relative w-full   flex justify-center items-center  ">
-                <div className=" w-48 flex items-center justify-center mx-auto h-48 absolute inset-x-0  rounded-full border-4 border-dotted border-app_primary animate-spin-slow z-0 "></div>
-
-                <div className="relative w-48   h-48 -translate-y-3 -translate-x-1 ml-2 ">
-                  <Image
-                    src="/images/process-icon3.png"
-                    alt="Process Icon"
-                    fill
-                    className="object-contain relative z-10"
-                  />
-                </div>
-              </div>
-
-              <div className="flex flex-col gap-3 w-full text-center ">
-                <h2 className="text-2xl font-semibold">Cleaning Environment</h2>
-                <p className="text-md text-gray-600  ">
-                  Proactively drive maintainable value next mission-critical
-                  infrastructures eggplant new environmental nature
-                </p>
-              </div>
-            </div>
+          <div className="w-full">
+            <DeveloperCarousel developers={developers} />
           </div>
-        </div> */}
+        </div>
 
-         <div className="flex flex-col gap-8 items-center pb-28 w-full max-w-screen-2xl mx-auto ">
-         
-            <div className="flex flex-col gap-3">
-              <div className="flex gap-2 text-center w-full justify-center">
-                <Image
-                  src="/images/sub-title-shape.png"
-                  alt=""
-                  width={20}
-                  height={10}
-                />
-                <p className="font-medium text-app_primary">WORKING PROCESS</p>
-              </div>
-        
-              <div className="flex w-full text-center">
-                <h2 className="w-full font-AlbertSans font-semibold text-[22px] leading-8 sm:text-[38px] sm:leading-[48px] md:text-[44px] md:leading-[54px] lg:text-[32px] lg:leading-[42px] xl:text-[40px] xl:leading-[50px] 2xl:text-[46px] 2xl:leading-[56px] text-HeadingColor-0">
-                  Process To Safe Environment
-                </h2>
-              </div>
-            </div>
-        
-            <div className="flex flex-col lg:flex-row justify-center text-center w-full px-6 sm:px-12 md:px-20 lg:px-40 pt-10">
-             
-              <div className="w-full flex flex-col gap-12">
-                <div className="relative w-full flex justify-center items-center">
-                  <div className="w-48 flex items-center justify-center mx-auto h-48 absolute inset-x-0 rounded-full border-4 border-dotted border-app_primary animate-spin-slow z-0"></div>
-        
-                  <div className="relative w-48 h-48 -translate-y-3 -translate-x-1 ml-2">
-                    <Image
-                      src="/images/process-icon.png"
-                      alt="Process Icon"
-                      fill
-                      className="object-contain relative z-10"
-                    />
-                  </div>
-                </div>
-        
-                <div className="flex flex-col gap-3 w-full text-center">
-                  <h2 className="text-2xl font-semibold">Collection Dust</h2>
-                  <p className="text-gray-600">
-                    Proactively drive maintainable value next mission-critical
-                    infrastructures eggplant new environmental nature
-                  </p>
-                </div>
-              </div>
-        
-              <div className="h-[200px] w-full text-center justify-center hidden lg:flex">
-                <div className="shrink-0 relative w-40 h-[30px] items-center my-auto">
-                  <Image
-                    src="/images/process-arrow.png"
-                    alt=""
-                    fill
-                    className="relative"
-                  />
-                </div>
-              </div>
-        
-              <div className="w-full flex flex-col gap-12 items-center">
-                <div className="relative w-full flex justify-center items-center">
-                  <div className="w-48 flex items-center justify-center mx-auto h-48 absolute inset-x-0 rounded-full border-4 border-dotted border-app_primary animate-spin-slow z-0"></div>
-        
-                  <div className="relative w-48 h-48 -translate-y-3 -translate-x-1 ml-2">
-                    <Image
-                      src="/images/process-icon2.png"
-                      alt="Process Icon"
-                      fill
-                      className="object-contain relative z-10"
-                    />
-                  </div>
-                </div>
-        
-                <div className="flex flex-col gap-3 w-full text-center">
-                  <h2 className="text-2xl font-semibold">Dust Recycling</h2>
-                  <p className="text-md text-gray-600">
-                    Proactively drive maintainable value next mission-critical
-                    infrastructures eggplant new environmental nature
-                  </p>
-                </div>
-              </div>
-        
-             
-              <div className="h-[200px] w-full text-center justify-center hidden lg:flex">
-                <div className="shrink-0 relative w-40 h-[30px] items-center my-auto">
-                  <Image
-                    src="/images/process-arrow2.png"
-                    alt=""
-                    fill
-                    className="relative"
-                  />
-                </div>
-              </div>
-        
-           
-              <div className="w-full flex flex-col gap-12 items-center">
-                <div className="relative w-full flex justify-center items-center">
-                  <div className="w-48 flex items-center justify-center mx-auto h-48 absolute inset-x-0 rounded-full border-4 border-dotted border-app_primary animate-spin-slow z-0"></div>
-        
-                  <div className="relative w-48 h-48 -translate-y-3 -translate-x-1 ml-2">
-                    <Image
-                      src="/images/process-icon3.png"
-                      alt="Process Icon"
-                      fill
-                      className="object-contain relative z-10"
-                    />
-                  </div>
-                </div>
-        
-                <div className="flex flex-col gap-3 w-full text-center">
-                  <h2 className="text-2xl font-semibold">Cleaning Environment</h2>
-                  <p className="text-md text-gray-600">
-                    Proactively drive maintainable value next mission-critical
-                    infrastructures eggplant new environmental nature
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div className="hidden md:block w-12 h-12 absolute right-40 top-44 animate-zoom-pulse">
+          <Image src="/images/testi-shape-1.png" alt="" fill />
+        </div>
       </section>
 
-     {/* ================= TESTIMONIALS SECTION ================= */}
-    <section className="flex w-full relative pb-64 bg-[#F5F8ED] z-10">
-    
-      <div className="hidden md:block w-12 h-12 absolute left-40 top-44 animate-zoom-pulse">
-        <Image src="/images/testi-shape-3.png" alt="" fill />
-      </div>
-    
-      <div
-        className="flex flex-col w-full max-w-screen-2xl mx-auto px-6 sm:px-10 md:px-20 lg:px-40"
-        style={{
-          backgroundImage: `url('/images/map.png')`,
-        }}
-      >
      
-        <div className="hidden md:flex justify-between w-full relative h-[100px]">
-          <div className="w-10 h-10 absolute left-0 top-20 animate-zoom-pulse-small">
-            <Image src="/images/testi-shape-4.png" alt="" fill />
-          </div>
-          <div className="w-10 h-10 absolute right-0 top-20 animate-zoom-pulse-small">
-            <Image src="/images/testi-shape-2.png" alt="" fill />
-          </div>
-        </div>
-    
-      
-        <div className="w-full flex flex-col gap-3 mt-4">
-          <div className="flex gap-2 text-center w-full justify-center">
-            <Image
-              src="/images/sub-title-shape.png"
-              alt=""
-              width={20}
-              height={10}
-            />
-            <p className="font-medium text-app_primary">TESTIMONIALS</p>
-          </div>
-    
-          <div className="flex w-full text-center">
-            <h2 className="mx-auto w-full sm:w-[700px] font-AlbertSans font-semibold text-[22px] leading-8 sm:text-[38px] sm:leading-[48px] md:text-[44px] md:leading-[54px] lg:text-[32px] lg:leading-[42px] xl:text-[40px] xl:leading-[50px] 2xl:text-[46px] 2xl:leading-[56px] text-HeadingColor-0">
-              Clients Best Feedback About Echofy Provission
-            </h2>
-          </div>
-        </div>
-    
-       
-        <div className="w-full">
-          <DeveloperCarousel developers={developers} />
-        </div>
-      </div>
-    
-    
-      <div className="hidden md:block w-12 h-12 absolute right-40 top-44 animate-zoom-pulse">
-        <Image src="/images/testi-shape-1.png" alt="" fill />
-      </div>
-    </section>
 
       {/* ================= BRAND SECTION ================= */}
-      {/* <section className=" rounded-lg w-full flex  h-fit flex-col items-center justify-center mx-auto relative z-40 -mt-[150px]">
-        <div
-          className="relative w-full py-20 rounded-lg max-w-screen-xl"
-          style={{
-            backgroundImage: `url('/images/brand-bg.jpg')`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        >
-          <div className="absolute -right-14 -top-14 overflow-hidden -z-40 w-24 h-24 animate-to-and-fro-down">
-            <Image src="/images/brand-shape.png" alt="" fill />
-          </div>
-          <div className="w-full flex items-center gap-4 text-center mb-10 justify-center">
-            <hr className="w-20 border-white" />
-            <p className="text-3xl text-white font-semibold">
-              All over the world 100,000+ Customers
-            </p>
-            <hr className="w-20 border-white" />
-          </div>
-
-          <div className="flex justify-evenly items-center w-full  gap-8">
-            <div className="relative w-48 h-16">
-              <Image
-                src="/images/brand-1.png"
-                alt="brand 1"
-                fill
-                className="object-contain"
-              />
-            </div>
-            <div className="relative w-48 h-16">
-              <Image
-                src="/images/brand-2.png"
-                alt="brand 2"
-                fill
-                className="object-contain"
-              />
-            </div>
-            <div className="relative w-48 h-16">
-              <Image
-                src="/images/brand-3.png"
-                alt="brand 3"
-                fill
-                className="object-contain"
-              />
-            </div>
-            <div className="relative w-48 h-16">
-              <Image
-                src="/images/brand-4.png"
-                alt="brand 4"
-                fill
-                className="object-contain"
-              />
-            </div>
-            <div className="relative w-48 h-16">
-              <Image
-                src="/images/brand-5.png"
-                alt="brand 5"
-                fill
-                className="object-contain"
-              />
-            </div>
-          </div>
-        </div>
-      </section> */}
-
-
-
-         {/* ================= BRAND SECTION ================= */}
       <section className="rounded-lg w-full flex h-fit flex-col items-center justify-center mx-auto relative z-40 -mt-[150px]">
         <div
           className="relative w-full py-20 rounded-lg max-w-screen-xl"
@@ -1263,7 +933,7 @@ export default function Home() {
           <div className="absolute -right-14 -top-14 overflow-hidden -z-40 w-24 h-24 animate-to-and-fro-down">
             <Image src="/images/brand-shape.png" alt="" fill />
           </div>
-      
+
           {/* Heading */}
           <div className="w-full flex items-center gap-4 text-center mb-10 justify-center">
             <hr className="w-20 border-white" />
@@ -1272,10 +942,9 @@ export default function Home() {
             </p>
             <hr className="w-20 border-white" />
           </div>
-      
+
           {/* Brands */}
           <div className="flex justify-evenly items-center w-full gap-8">
-        
             <div className="hidden md:block relative w-48 h-16">
               <Image
                 src="/images/brand-1.png"
@@ -1308,8 +977,7 @@ export default function Home() {
                 className="object-contain"
               />
             </div>
-      
-          
+
             <div className="relative w-48 h-16">
               <Image
                 src="/images/brand-5.png"
@@ -1320,7 +988,6 @@ export default function Home() {
             </div>
           </div>
         </div>
-        
       </section>
 
       <section

@@ -1,9 +1,3 @@
-
-
-
-
-
-
 "use client";
 import Image from "next/image";
 
@@ -15,19 +9,26 @@ type DeveloperCardProps = {
 
 const DeveloperCard = ({ image, name, position }: DeveloperCardProps) => {
   return (
-    <div className="group relative flex gap-4 w-full  p-12 rounded-md overflow-hidden">
-   
+    <div className="group relative flex gap-4 w-full p-12 rounded-md overflow-hidden">
+      {/* Hover Background */}
       <div className="absolute inset-0 bg-app_primary scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-center rounded-lg z-0"></div>
 
-  
+      {/* Content */}
       <div className="relative z-10 flex gap-4 w-full">
-   
-        <div className="relative w-28 h-24 mb-auto">
-          <Image src={image} alt="" fill sizes="112px" />
+        {/* Responsive Image */}
+        <div className="relative w-32 h-28 sm:w-40 sm:h-36 lg:w-28 lg:h-24 mb-auto">
+          <Image
+            src={image}
+            alt={name}
+            fill
+            className="object-contain"
+            sizes="(max-width: 640px) 160px, (max-width: 1024px) 180px, 112px"
+          />
         </div>
 
+        {/* Text Content */}
         <div className="w-full flex flex-col gap-6">
-      
+          {/* Stars */}
           <div className="flex gap-1">
             {[1, 2, 3, 4, 5].map((element, index) => (
               <div
@@ -51,14 +52,14 @@ const DeveloperCard = ({ image, name, position }: DeveloperCardProps) => {
             ))}
           </div>
 
-     
+          {/* Description */}
           <p className="text-gray-600 text-lg transition-colors duration-300 group-hover:text-white">
             Appropriately administrate proactive value with to niche markets.
             Dramatically target market position idea after high quality best
             practice. Dramatically synergize open source service
           </p>
 
-       
+          {/* Footer */}
           <div className="flex w-full h-full justify-between">
             <div className="flex flex-col gap-2">
               <h2 className="text-2xl font-semibold transition-colors duration-300 group-hover:text-white">
@@ -69,7 +70,6 @@ const DeveloperCard = ({ image, name, position }: DeveloperCardProps) => {
               </p>
             </div>
 
-          
             <div className="relative w-32 h-6 transition duration-300 group-hover:invert">
               <Image src="/images/envato.png" alt="" fill sizes="100px" />
             </div>
@@ -81,4 +81,20 @@ const DeveloperCard = ({ image, name, position }: DeveloperCardProps) => {
 };
 
 export default DeveloperCard;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
