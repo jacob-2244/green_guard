@@ -7,15 +7,11 @@ import { useState, useEffect } from "react";
 import ServiceCard2 from "@/components/ServiceCard2";
 const Header2 = dynamic(() => import("@/components/Header2"), { ssr: false });
 
-
-
 const ServiceCards = [
   {
     image: "/images/services-thumb.png",
     icon: "/images/service2-icon.png",
     title: "Ocean Clean",
-
-  
   },
 
   {
@@ -36,23 +32,22 @@ const ServiceCards = [
     title: "Tree Plantation",
   },
 
-    {
+  {
     image: "/images/services-thumb5.png",
     icon: "/images/service2-icon5.png",
     title: "Sustainble Energy",
   },
   {
-   image: "/images/services-thumb6.png",
+    image: "/images/services-thumb6.png",
     icon: "/images/service2-icon6.png",
     title: "Planatary Warming",
   },
-
 ];
 
-export default function Service(){
-      const [showScrollTop, setShowScrollTop] = useState(false);
+export default function Service() {
+  const [showScrollTop, setShowScrollTop] = useState(false);
 
-     useEffect(() => {
+  useEffect(() => {
     const handleScroll = () => {
       setShowScrollTop(window.scrollY > 0);
     };
@@ -61,16 +56,15 @@ export default function Service(){
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-    return(
-        <>
-         <section
-
+  return (
+    <>
+      <section
         className="flex flex-col relative  w-full bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url('/images/about-bg.jpg')` }}
       >
         <Header2 />
         <div className="w-full flex flex-col gap-3 text-center justify-center text-white pt-28 pb-40">
-          <h1 className="flex w-full text-center justify-center text-5xl font-bold ">
+          <h1 className="flex w-full text-center justify-center  text-3xl md:text-5xl font-bold ">
             Our Services
           </h1>
           <div className="flex gap-3 w-full justify-center">
@@ -107,69 +101,41 @@ export default function Service(){
         </div>
       </section>
 
-       <section
-              className=" w-full bg-[#F3F3F7] "
-           
-            >
-              <div className="mx-auto flex flex-col justify-center   gap-14 px-40 py-28 w-full max-w-screen-2xl">
-                
-                <div className="flex flex-col gap-6">
-                <div className="flex gap-2 w-full justify-center ">
-                  <Image
-                    src="/images/sub-title-shape.png"
-                    alt=""
-                    width={20}
-                    height={10}
-                  />
-                  <p className="font-medium text-app_primary ">OUR SERVICES</p>
-                </div>
-      
-                <div className=" flex w-fit text-center justify-center ">
-                  <h2 className="px-64 w-full font-AlbertSans font-semibold text-[22px] leading-8 sm:text-[38px] sm:leading-[48px] md:text-[44px] md:leading-[54px] lg:text-[32px] lg:leading-[42px] xl:text-[40px] xl:leading-[50px] 2xl:text-[46px] 2xl:leading-[56px] text-HeadingColor-0 ">
-                    Echofy Provide Environment Best Leading Services{" "}
-                  </h2>
-      
-                
-                </div>
-                </div>
+      <section className=" w-full bg-[#F3F3F7] ">
+        <div className="mx-auto flex flex-col justify-center  gap-14  px-4 py-28 w-full max-w-screen-xl">
+          <div className="flex flex-col gap-6">
+            <div className="flex gap-2 w-full justify-center ">
+              <Image
+                src="/images/sub-title-shape.png"
+                alt=""
+                width={20}
+                height={10}
+              />
+              <p className="font-medium text-app_primary ">OUR SERVICES</p>
+            </div>
 
-                <div className="grid grid-cols-l sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            <div className=" flex w-full md:text-center justify-center ">
+              <h2 className="   px-4 max-w-screen-md mx-auto w-full font-AlbertSans font-semibold text-[22px] leading-8 sm:text-[38px] sm:leading-[48px] md:text-[44px] md:leading-[54px] lg:text-[32px] lg:leading-[42px] xl:text-[40px] xl:leading-[50px] 2xl:text-[46px] 2xl:leading-[56px] text-HeadingColor-0 ">
+                Echofy Provide Environment Best Leading Services{" "}
+              </h2>
+            </div> 
+          </div>
 
-                    
-                    {
-                      ServiceCards.map((Card,index)=>(
-                        <ServiceCard2
-                        key={index}
-                        image={Card.image}
-                        icon={Card.icon}
-                        title={Card.title}
-                        />
+          <div className="grid grid-cols-l sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {ServiceCards.map((Card, index) => (
+              <ServiceCard2
+                key={index}
+                image={Card.image}
+                icon={Card.icon}
+                title={Card.title}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
 
-                      ))  
-                    }
-
-                   
-
-
-                </div>
-
-
-                
-      
-              </div>
-            </section>
-
-            
       <Footer />
       <ScrollToTop show={showScrollTop} />
-
-
-
-
-
-
-        
-        
-        </>
-    )
+    </>
+  );
 }
