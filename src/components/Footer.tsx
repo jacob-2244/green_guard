@@ -375,7 +375,7 @@ import {
 const Footer = () => {
   return (
     <footer
-      className="w-full h-fit bg-cover bg-center pt-28 pb-6 z-10"
+      className="w-full h-fit bg-cover bg-center pt-28 pb-6 z-10 overflow-hidden"
       style={{ backgroundImage: "url('/images/footer-bg.jpg')" }}
     >
       {/* Social Section */}
