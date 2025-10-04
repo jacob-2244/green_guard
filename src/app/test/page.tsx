@@ -17,6 +17,7 @@ import Header2 from "@/components/Header2";
 import Link from "next/link";
 import ServiceCard from "@/components/ServiceCard";
 import ScrollToTop from "@/components/ScrollToTop";
+import Footer from "@/components/Footer";
 
 
 import {
@@ -1135,6 +1136,9 @@ export default function Test () {
                 ))}
               </div>
             </section>
+
+
+            <Footer/>
         
          <ScrollToTop show={showScrollTop} />
     </>
