@@ -496,7 +496,7 @@ export default function Home() {
       </h2>
 
       <div className="flex gap-4 justify-end w-full">
-        {/* Left Arrow (original) */}
+      
         <div className="group flex h-12 w-12 items-center justify-center rounded-full bg-app_primary text-white transition-colors duration-300 hover:bg-gray-200 hover:text-app_primary hover:cursor-pointer">
           <div className="relative h-6 w-6">
             <svg
@@ -522,7 +522,7 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Right Arrow (original) */}
+
         <div className="group flex h-12 w-12 items-center justify-center rounded-full bg-gray-200 text-app_primary transition-colors duration-300 hover:bg-app_primary hover:text-white hover:cursor-pointer">
           <div className="relative h-6 w-6">
             <svg
@@ -566,9 +566,9 @@ export default function Home() {
               key={index}
               className="
                 w-full 
-                sm:basis-1/1    /* 1 card on small screens */
-                md:basis-1/2    /* 2 cards on medium screens */
-                lg:basis-1/3    /* 3 cards on large screens */
+                sm:basis-1/1    
+                md:basis-1/2    
+                lg:basis-1/3   
               "
             >
               <ServiceCard
