@@ -5,7 +5,7 @@ import Image from "next/image";
 import AccordionUsage from "@/components/AccordionUsage";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 
 const PriceCards = [
   {
@@ -24,7 +24,18 @@ const PriceCards = [
 ];
 
 export default function PricingPlan() {
-     const [showScrollTop, setShowScrollTop] = useState(false);
+     const [showScrollTop,setShowScrollTop] = useState(false);
+
+
+
+     useEffect(() => {
+         const handleScroll = () => {
+           setShowScrollTop(window.scrollY > 0);
+         };
+     
+         window.addEventListener("scroll", handleScroll);
+         return () => window.removeEventListener("scroll", handleScroll);
+       }, []);
   return (
     <>
       <section
