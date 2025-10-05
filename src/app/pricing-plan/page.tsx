@@ -3,6 +3,9 @@ import Header2 from "@/components/Header2";
 import PriceCard from "@/components/PriceCard";
 import Image from "next/image";
 import AccordionUsage from "@/components/AccordionUsage";
+import Footer from "@/components/Footer";
+import ScrollToTop from "@/components/ScrollToTop";
+import { useState } from "react";
 
 const PriceCards = [
   {
@@ -21,6 +24,7 @@ const PriceCards = [
 ];
 
 export default function PricingPlan() {
+     const [showScrollTop, setShowScrollTop] = useState(false);
   return (
     <>
       <section
@@ -152,6 +156,10 @@ export default function PricingPlan() {
               />
               </div>
             </section>
+
+              <Footer />
+      <ScrollToTop show={showScrollTop} />
+            
     </>
   );
 }
