@@ -391,12 +391,12 @@ const Footer = () => {
             <Image src="/images/footer-social-shape.png" alt="" fill />
           </div>
         </div>
-        <div className="flex w-full justify-between z-20 px-10  ">
+        <div className="flex flex-col gap-4 md:flex-row w-full justify-between z-20 px-10  ">
           <div className="absolute  left-1/2 overflow-hidden z-0 w-20 top-1/2 bottom-1/2 h-10 animate-zoom-pulse">
             <Image src="/images/footer-shape2.png" alt="" fill />
           </div>
-          <div className="w-full  items-center h-full flex justify-start px-4 ">
-            <h2 className="text-4xl text-white font-bold">
+          <div className="w-full  items-center h-full flex justify-start">
+            <h2 className=" text-2xl md:text-4xl text-white font-bold">
               Stay With Us On Social
             </h2>
           </div>
@@ -499,7 +499,7 @@ const Footer = () => {
         <div className="flex flex-col gap-4 w-full text-left">
           <h2 className="text-white text-2xl md:text-3xl font-bold">Quick Links</h2>
           <div className="flex flex-col gap-6 w-full">
-            <p className="text-base md:text-lg text-gray-400 hover:text-app_primary cursor-pointer">Testimonials</p>
+            <Link className="text-base md:text-lg text-gray-400 hover:text-app_primary cursor-pointer " href={"#testimonals"}>Testimonials</Link>
             <Link className="text-base md:text-lg text-gray-400 hover:text-app_primary" href={Contact}>Contact Us</Link>
             <Link className="text-base md:text-lg text-gray-400 hover:text-app_primary" href={Faq}>Faq</Link>
           </div>

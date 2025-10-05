@@ -47,7 +47,7 @@ export default function Contact() {
       >
         <Header2 />
         <div className="w-full flex flex-col gap-3 text-center justify-center text-white pt-28 pb-40">
-          <h1 className="flex w-full text-center justify-center text-5xl font-bold ">
+          <h1 className="flex w-full text-center justify-center  text-3xl md:text-5xl font-bold ">
             Contact US
           </h1>
           <div className="flex gap-3 w-full justify-center">
@@ -79,13 +79,13 @@ export default function Contact() {
               <path d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z"></path>
             </svg>
 
-            <p className="text-gray-300">Contact Us</p>
+            <p className="text-gray-300">Contact US</p>
           </div>
         </div>
       </section>
 
       <section className="w-full py-28">
-        <div className=" w-full max-w-screen-2xl px-40 justify-center items-center  mx-auto">
+        <div className=" w-full max-w-screen-xl md:px-8 px-4 justify-center items-center  mx-auto">
           <div className=" gap-10 py-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 w-full rounded-lg bg-app_primary">
             <div className=" my-4 flex w-full flex-col justify-center text-center px-2  group   border-r-2 border-t-white text-white gap-6">
               <div className="w-[80px] h-[80px] flex items-center justify-center bg-white rounded-full text-app_primary relative m-auto z-10 transition-all duration-500 group-hover:bg-black group-hover:text-white before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-SecondaryColor-0 before:transition-all before:duration-500 before:scale-0 before:-z-10 before:rounded-full group-hover:before:scale-100 after:absolute after:-top-[11px] after:-left-[11px] after:w-[102px] after:h-[102px] after:border-2 after:border-white after:rounded-full after:opacity-50 after:animate-ping">
@@ -157,9 +157,12 @@ export default function Contact() {
       </section>
 
       <section className="w-full pb-28">
-        <div className="flex justify-between gap-20 w-full max-w-screen-2xl px-40 mx-auto">
+        <div className="flex flex-col md:flex-row md:justify-between gap-20 w-full max-w-screen-xl px-8 mx-auto">
           <div className="  relative w-full h-[600px]">
-            <Image src="/images/contact-map.png" alt="" fill />
+            <Image src="/images/contact-map.png" alt="" fill
+            className="xs:h-[400px] md:h-fit"
+            
+             />
           </div>
 
           <div className="w-full flex flex-col gap-5">
@@ -169,6 +172,7 @@ export default function Contact() {
                 alt=""
                 width={20}
                 height={10}
+             
               />
               <p className="font-medium text-app_primary">GET IN TOUCH</p>
             </div>

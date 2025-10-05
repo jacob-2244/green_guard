@@ -22,13 +22,13 @@ export default function Faq() {
 
   return (
     <>
-      <section
+     <section
         className="flex flex-col relative  w-full bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url('/images/about-bg.jpg')` }}
       >
         <Header2 />
         <div className="w-full flex flex-col gap-3 text-center justify-center text-white pt-28 pb-40">
-          <h1 className="flex w-full text-center justify-center text-5xl font-bold ">
+          <h1 className="flex w-full text-center justify-center  text-3xl md:text-5xl font-bold ">
             FAQ
           </h1>
           <div className="flex gap-3 w-full justify-center">
@@ -64,12 +64,11 @@ export default function Faq() {
           </div>
         </div>
       </section>
-
       <section
         className="flex flex-col relative  w-full bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url('/images/faq-bg.jpg')` }}
       >
-        <div className="flex w-full  max-w-screen-2xl py-28 mx-auto gap-10  px-40">
+        <div className="flex flex-col md:flex-row w-full  max-w-screen-xl py-28 mx-auto gap-10  px-8">
           <div className="flex flex-col  gap-2 w-full">
             <div className="flex gap-2">
               <Image

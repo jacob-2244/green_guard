@@ -210,7 +210,7 @@ export default function Home() {
       >
         <Header2 />
 
-        <div className="py-20 sm:py-28 xl:py-0 flex flex-col xl:flex-row justify-between items-center gap-10 w-full mx-auto my-auto px-4 sm:px-6 lg:px-80">
+        <div className="py-20 sm:py-28 xl:py-0 flex flex-col xl:flex-row justify-between items-center gap-10 w-full mx-auto my-auto px-4 sm:px-6 lg:px-40">
           <div className="flex flex-row w-full">
             <div
               className="hidden md:flex flex-col items-center gap-10 opacity-90 p-6"
@@ -870,7 +870,7 @@ export default function Home() {
       </section>
 
       {/* ================= TESTIMONIALS SECTION ================= */}
-      <section className="flex w-full relative pb-40 sm:pb-48 lg:pb-64 bg-[#F5F8ED]  overflow-hidden">
+      <section id="testimonals" className="flex w-full relative pb-40 sm:pb-48 lg:pb-64 bg-[#F5F8ED]  overflow-hidden">
         {/* left floating shape (hidden on mobile) */}
         <div className="hidden md:block w-12 h-12 absolute left-10 lg:left-40 top-20 lg:top-44 animate-zoom-pulse">
           <Image src="/images/testi-shape-3.png" alt="" fill />
@@ -1006,6 +1006,8 @@ export default function Home() {
         </div>
       </section>
 
+
+{/* team section */}
       <section
         className="flex w-full relative h-fit pt-48 pb-12 -mt-[100px] md:-mt-[150px]"
         style={{ backgroundImage: `url("/images/team-bg.jpg")` }}
