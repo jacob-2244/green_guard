@@ -157,6 +157,7 @@ export default function Home() {
   const [showScrollTop, setShowScrollTop] = useState(false);
 
   const [currentBackground, setCurrent] = useState("/images/banner-bg.jpg");
+ 
 
   useEffect(() => {
     const handleScroll = () => {
@@ -210,7 +211,7 @@ export default function Home() {
       >
         <Header2 />
 
-        <div className="py-20 sm:py-28 xl:py-0 flex flex-col xl:flex-row justify-between items-center gap-10 w-full mx-auto my-auto px-4 sm:px-6 lg:px-40">
+        <div className="py-20 sm:py-28 xl:py-0 flex flex-col xl:flex-row justify-between items-center gap-10 w-full mx-auto my-auto px-4 sm:px-6 lg:px-40 xl:px-80">
           <div className="flex flex-row w-full">
             <div
               className="hidden md:flex flex-col items-center gap-10 opacity-90 p-6"
@@ -325,13 +326,16 @@ export default function Home() {
             </div>
 
             <div className="flex flex-col gap-3 items-center justify-center my-auto ml-6">
+              <div className="w-8 h-8 text-center align-middle  flex  items-center rounded-full border-2 border-t-app_primary justify-center ">
               <input
                 id="default-radio-1"
                 type="radio"
                 name="default-radio"
-                className="w-4 h-4 cursor-pointer border-2 border-white/50 rounded-full checked:border-white checked:border-4 hover:border-white/70 transition-all"
+                className="  w-4 h-4 cursor-pointer border-2 border-white/50 rounded-full checked:border-white checked:border-4 hover:border-white/70 transition-all"
                 onClick={applyFirstBackground}
               />
+
+              </div>
               <input
                 id="default-radio-2"
                 type="radio"

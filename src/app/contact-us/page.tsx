@@ -157,10 +157,10 @@ export default function Contact() {
       </section>
 
       <section className="w-full pb-28">
-        <div className="flex flex-col md:flex-row md:justify-between gap-20 w-full max-w-screen-xl px-8 mx-auto">
-          <div className="  relative w-full h-[600px]">
+        <div className="flex flex-col md:flex-row md:justify-between gap-20 w-full max-w-screen-xl px-4 md:px-8 mx-auto">
+          <div className=" flex justify-center relative w-full h-[400px] md:h-[600px]">
             <Image src="/images/contact-map.png" alt="" fill
-            className="xs:h-[400px] md:h-fit"
+            // className=" w-300 md:w-full xs:h-[200px] md:h-fit"
             
              />
           </div>
@@ -181,7 +181,7 @@ export default function Contact() {
             </h2>
 
            <form  className="w-full flex flex-col gap-5" onSubmit={handleSubmit(onSubmit)}>
-            <div className="w-full flex  gap-6 justify-between ">
+            <div className="w-full  flex-col sm:flex-row  gap-6 justify-between ">
                 
               <div className="w-full ">
                 <input
@@ -212,7 +212,7 @@ export default function Contact() {
             </div>
            
 
-            <div className="w-full flex  gap-6 justify-between">
+            <div className="w-full flex-col sm:flex-row  gap-6 justify-between">
               <div className="w-full">
                 <input
                   {...register("email", { required: "Email is required" })}
