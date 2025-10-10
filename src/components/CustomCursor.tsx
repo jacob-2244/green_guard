@@ -1,5 +1,5 @@
-// components/CustomCursor.js
-'use client'; // Important for using client-side hooks
+// components/CustomCursor.tsx
+'use client';
 
 import { useEffect, useState } from 'react';
 
@@ -7,7 +7,8 @@ const CustomCursor = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
-    const onMouseMove = (e: { clientX: any; clientY: any; }) => {
+    // Correctly type the event as MouseEvent
+    const onMouseMove = (e: MouseEvent) => {
       setPosition({ x: e.clientX, y: e.clientY });
     };
 
@@ -20,10 +21,11 @@ const CustomCursor = () => {
 
   return (
     <div
-      className="custom-cursor"
+      className="custom-cursor fixed pointer-events-none w-4 h-4 rounded-full bg-green-500 mix-blend-difference z-[9999] transition-transform duration-75"
       style={{
         left: `${position.x}px`,
         top: `${position.y}px`,
+        transform: 'translate(-50%, -50%)',
       }}
     />
   );
