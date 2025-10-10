@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import CustomCursor from "@/components/CustomCursor";
 
 
 
@@ -36,6 +37,7 @@ export default function RootLayout({
       >
    
         {children}
+           <CustomCursor />
        
       </body>
     </html>

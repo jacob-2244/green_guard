@@ -9,3 +9,20 @@
 html, body {
   overflow-x: hidden; /* prevent horizontal scrollbar */
 }
+
+
+
+
+
+/* styles/globals.css or custom-cursor.module.css */
+.custom-cursor {
+  position: fixed;
+  width: 14px; /* Adjust size as needed */
+  height: 14px; /* Adjust size as needed */
+  background-color: #79B900; /* Dot color */
+  border-radius: 50%;
+  pointer-events: none; /* Crucial to allow clicks on elements beneath */
+  transform: translate(-50%, -50%); /* Center the dot on the cursor */
+  z-index: 9999; /* Ensure it's on top of other elements */
+  transition: transform 5s ease-out; /* Smooth movement */
+}

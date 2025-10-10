@@ -326,7 +326,7 @@ export default function Home() {
             </div>
 
             <div className="flex flex-col gap-3 items-center justify-center my-auto ml-6">
-              <div className="w-8 h-8 text-center align-middle  flex  items-center rounded-full border-2 border-t-app_primary justify-center ">
+             
               <input
                 id="default-radio-1"
                 type="radio"
@@ -335,7 +335,6 @@ export default function Home() {
                 onClick={applyFirstBackground}
               />
 
-              </div>
               <input
                 id="default-radio-2"
                 type="radio"
@@ -343,7 +342,19 @@ export default function Home() {
                 className="w-4 h-4 cursor-pointer border-2 border-white/50 rounded-full checked:border-white checked:border-4 hover:border-white/70 transition-all"
                 onClick={applySecondBackground}
               />
+
+
+
+          
+   
+
             </div>
+
+
+
+            
+
+
           </div>
         </div>
       </section>

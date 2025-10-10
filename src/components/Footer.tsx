@@ -86,14 +86,14 @@ const Footer = () => {
           <div className="flex gap-2 items-center justify-start">
             <Image src="/svgs/call.svg" alt="" width={20} height={15} />
             <a className="text-base md:text-lg" href="">
-              +923487997462
+              +144547683514
             </a>
           </div>
 
           <div className="flex gap-2 justify-start">
             <Image src="/svgs/email.svg" alt="" width={28} height={20} />
             <a className="text-base md:text-lg" href="#">
-              muhammadyaqoob2580@gmail.com
+              echofy@gmail.com
             </a>
           </div>
         </div>
