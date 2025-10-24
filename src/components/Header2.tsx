@@ -409,7 +409,68 @@ export default function Header2() {
                 <Link href={Home}>Home</Link>
                 <Link href={About}>About</Link>
                 <Link href={Service}>Service</Link>
-                <Link href="#">Pages</Link>
+                {/* <Link href="#">Pages</Link> */}
+
+                 <div className="relative group">
+                    <button className="flex items-center gap-1">
+                      Pages
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="w-4 h-4 mt-[2px]"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M19 9l-7 7-7-7"
+                        />
+                      </svg>
+                    </button>
+
+                    {/* Dropdown Menu showing existing links */}
+                    <div className="absolute left-0 top-full mt-2 w-48 bg-black text-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border border-gray-700">
+                      <Link
+                        href={Home}
+                        className="block px-4 py-2 hover:bg-app_primary"
+                      >
+                        Home
+                      </Link>
+                      <Link
+                        href={About}
+                        className="block px-4 py-2 hover:bg-app_primary "
+                      >
+                        About
+                      </Link>
+                      <Link
+                        href={Service}
+                        className="block px-4 py-2 hover:bg-app_primary"
+                      >
+                        Service
+                      </Link>
+                      <Link
+                        href={Contact}
+                        className="block px-4 py-2 hover:bg-app_primary"
+                      >
+                        Contact
+                      </Link>
+                      <Link
+                        href={PricingPlan}
+                        className="block px-4 py-2 hover:bg-app_primary"
+                      >
+                        Pricing Plan
+                      </Link>
+
+                       <Link
+                        href={Faq}
+                        className="block px-4 py-2 hover:bg-app_primary"
+                      >
+                        Faq
+                      </Link>
+                    </div>
+                  </div>
                 <Link href={Contact}>Contact</Link>
                 <Link href={PricingPlan}>Pricing Plan</Link>
               </div>
