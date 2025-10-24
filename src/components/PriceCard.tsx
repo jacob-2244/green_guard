@@ -68,7 +68,7 @@ export default function PriceCard({ plan, price }:PriceCardInputs) {
           </div>
         </Link>
 
-        <div className="absolute right-6 top-6 w-20 h-20 rounded-full z-10">
+        <div className="absolute right-6 top-6 w-20 h-20 rounded-full z-10 ">
           <Image
             src="/images/pricing-shape-1.png"
             alt=""
